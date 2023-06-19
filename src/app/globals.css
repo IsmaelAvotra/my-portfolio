@@ -19,3 +19,7 @@ body {
   font-family: 'Lora', serif;
   font-weight: 600;
 }
+
+.navbar .navigation {
+  backdrop-filter: blur(50px);
+}

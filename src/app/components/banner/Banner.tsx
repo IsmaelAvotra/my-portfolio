@@ -15,9 +15,9 @@ const sentence3 = 'Web and Mobile developer'.split('')
 
 const Banner = () => {
   return (
-    <section className='banner w-full relative'>
+    <section className='banner w-full relative z-10'>
       <div>
-        <div className='text-h1 mb-1' data-aos='fade-up' data-aos-delay='400'>
+        <div className='text-h1 mb-1'>
           {sentence1.map((letter, index) => {
             return (
               <TextSpan key={index} className='text-mxl text-yellow '>
@@ -27,7 +27,7 @@ const Banner = () => {
           })}
         </div>
 
-        <div className='text-h1 mb-1' data-aos='fade-up' data-aos-delay='500'>
+        <div className='text-h1 mb-1'>
           {sentence2.map((letter, index) => {
             return (
               <TextSpan key={index} className='text-sxl '>
@@ -36,7 +36,7 @@ const Banner = () => {
             )
           })}
         </div>
-        <div className='text-h1 mb-8' data-aos='fade-up' data-aos-delay='600'>
+        <div className='text-h1 mb-8'>
           {sentence3.map((letter, index) => {
             return (
               <TextSpan key={index} className='text-sxl '>
@@ -47,27 +47,16 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        <button
-          className='bg-yellow  py-2 px-12 grid place-items-center  rounded-sm mb-6'
-          data-aos='fade-up'
-          data-aos-delay='700'
-        >
-          <Link href='/about' className='text-bgcolor text-sm font-semibold'>
+        <button className='bg-yellow  py-2 px-12 grid place-items-center  rounded-sm mb-6'>
+          <Link
+            href='/about'
+            className='text-bgcolor text-sm font-semibold cursor-pointer'
+          >
             View my projects
           </Link>
         </button>
-
-        {/* <button
-          className=' bg-titlecolor  py-3 grid place-items-center w-full rounded-sm mb-4'
-          data-aos='fade-up'
-          data-aos-delay='700'
-        >
-          <Link href='/about' className='text-bgcolor text-sm font-semibold'>
-            View my projects
-          </Link>
-        </button> */}
       </div>
-      <div className='socials' data-aos='fade-up' data-aos-delay='800'>
+      <div className='socials'>
         <a href='https://github.com/IsmaelAvotra' target='_blank'>
           <AiFillGithub />
         </a>
