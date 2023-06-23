@@ -47,7 +47,7 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        <button className='bg-yellow  py-2 px-12 grid place-items-center  rounded-sm mb-6'>
+        <button className='bg-yellow  py-2 px-12 grid place-items-center  rounded-[4px] mb-6'>
           <Link
             href='/about'
             className='text-bgcolor text-sm font-semibold cursor-pointer'

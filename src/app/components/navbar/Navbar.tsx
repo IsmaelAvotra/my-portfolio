@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href='/'
+              href='/skills'
               className='text-lg'
               onClick={() => setIsActive(false)}
             >

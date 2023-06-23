@@ -31,6 +31,9 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
+      <div className='experience mt-8 mb-20 '>
+        <h3 className='text-xl text-titlecolor font-medium'>My experience</h3>
+      </div>
     </div>
   )
 }
