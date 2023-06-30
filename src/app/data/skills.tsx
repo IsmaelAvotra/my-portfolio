@@ -128,30 +128,30 @@ export const softSkills: SoftSkils[] = [
     imageUrl: '/soft1.jpg',
     quality: 'Team Work',
     description:
-      'Team work is a quality essential for a developer,This is beautiful to have it',
+      'Team work is a quality essential for a quality essential developer,This is beautiful to have it',
   },
   {
     imageUrl: '/soft2.jpg',
     quality: 'Creativity',
     description:
-      'Team work is a quality essential for a developer,This is beautiful to have it',
+      'Team work is a quality essential for a quality essential developer,This is beautiful to have it',
   },
   {
     imageUrl: '/soft3.jpg',
     quality: 'Problem Solving',
     description:
-      'Team work is a quality essential for a developer,This is beautiful to have it',
+      'Team work is a quality essential for a quality essential developer,This is beautiful to have it',
   },
   {
     imageUrl: '/soft4.jpg',
     quality: 'Autodidact',
     description:
-      'Team work is a quality essential for a developer,This is beautiful to have it',
+      'Team work is a quality essential for a quality essential developer,This is beautiful to have it',
   },
   {
     imageUrl: '/soft5.jpg',
     quality: 'Organizational skills',
     description:
-      'Team work is a quality essential for a developer,This is beautiful to have it',
+      'Team work is a quality essential for a quality essential developer,This is beautiful to have it',
   },
 ]

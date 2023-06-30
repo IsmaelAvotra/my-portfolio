@@ -23,3 +23,7 @@ body {
 .navbar .navigation {
   backdrop-filter: blur(50px);
 }
+
+footer {
+  background: linear-gradient(156deg, #020d1e 0%, #021024 100%);
+}

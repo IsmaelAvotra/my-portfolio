@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href='/'
+              href='/projects'
               className='text-lg'
               onClick={() => setIsActive(false)}
             >
@@ -65,7 +65,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href='/'
+              href='/contact'
               className='text-lg'
               onClick={() => setIsActive(false)}
             >
