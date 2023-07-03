@@ -15,7 +15,7 @@ const sentence3 = 'Web and Mobile developer'.split('')
 
 const Banner = () => {
   return (
-    <section className='banner w-full relative z-10'>
+    <section className='banner w-full relative -z-10'>
       <div>
         <div className='text-h1 mb-1'>
           {sentence1.map((letter, index) => {
@@ -56,7 +56,7 @@ const Banner = () => {
           </Link>
         </button>
       </div>
-      <div className='socials'>
+      <div className='socials z-10'>
         <a href='https://github.com/IsmaelAvotra' target='_blank'>
           <AiFillGithub />
         </a>

@@ -8,7 +8,7 @@ import { IoMenu, IoClose } from 'react-icons/io5'
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false)
   return (
-    <div className='navbar p-4 flex items-center justify-between relative '>
+    <div className='navbar p-4 flex items-center justify-between sticky top-0 z-60 bg-bgcolor'>
       <div className='logo'>
         <Link href='/'>
           <Image src='/logo.svg' alt='logo' width={24} height={42} />
