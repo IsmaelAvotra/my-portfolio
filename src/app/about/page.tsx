@@ -6,13 +6,15 @@ import Footer from '../components/footer/Footer'
 const AboutPage = () => {
   return (
     <>
-      <div className='about mt-8 px-4 '>
-        <h2 className='text-lg mb-8'>
+      <div className='about mt-8 px-4 tablet:px-8 min-h-[90vh] '>
+        <h2 className='text-lg mb-8 tablet:text-[22px]'>
           {' '}
-          <span className='text-yellow text-xl font-semibold mr-4'>01.</span>
+          <span className='text-yellow text-xl font-semibold mr-4 tablet:text-[30px]'>
+            01.
+          </span>
           About Me
         </h2>
-        <div className='container flex flex-col gap-8 items-center  mb-16'>
+        <div className='container  flex flex-col  gap-8 items-center  mb-16'>
           <div className='image  -z-10'>
             <Image
               src='/about.png'
@@ -36,10 +38,10 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        <div className='experience mt-12 mb-12 '>
+        <div className='experience mt-16 mb-12 '>
           <h3 className='text-xl text-titlecolor font-medium'>My experience</h3>
 
-          <div className='experience-content flex gap-4 overflow-auto mt-8'>
+          <div className='experience-content flex gap-4 overflow-auto mt-8 tablet:mt-12'>
             {experiences.map((experience) => {
               return (
                 <div key={experience.id} className='experience-card'>

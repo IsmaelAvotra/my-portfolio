@@ -8,17 +8,24 @@ import Footer from '../components/footer/Footer'
 const Projects = () => {
   return (
     <>
-      <div className='skills mt-8 px-4 mb-16'>
-        <h2 className='text-lg mb-8'>
+      <div className='skills mt-8 px-4 tablet:px-8 mb-16'>
+        <h2 className='text-lg tablet:text-[22px] mb-8 '>
           {' '}
-          <span className='text-yellow text-xl font-semibold mr-4'>03.</span>My
-          Projects
+          <span className='text-yellow text-xl tablet:text-[30px] font-semibold mr-4'>
+            03.
+          </span>
+          My Projects
         </h2>
         <div className='container flex flex-col gap-8'>
           {projects.map((project, index) => {
             return (
-              <div key={index} className=''>
-                <div className='top'>
+              <div
+                key={index}
+                className={` tablet:flex items-center ${
+                  index % 2 == 0 ? 'tablet:flex-row' : 'tablet:flex-row-reverse'
+                }`}
+              >
+                <div className='top  tablet:flex-1 '>
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -27,7 +34,7 @@ const Projects = () => {
                     className=' mb-2'
                   />
                 </div>
-                <div className='bottom'>
+                <div className='bottom tablet:flex-1'>
                   <p className='flex items-center gap-2 text-titlecolor text-[22px] mb-2'>
                     {' '}
                     <GiFlowerStar className='text-[20px] text-yellow' />{' '}

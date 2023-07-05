@@ -27,3 +27,13 @@
   color: var(--second-clr);
   transform: scale(1.2);
 }
+
+@media screen and (min-width: 600px) {
+  .banner .socials {
+    gap: 1.2rem;
+    right: 1.5rem;
+  }
+  .banner .socials svg {
+    font-size: 1.6rem;
+  }
+}

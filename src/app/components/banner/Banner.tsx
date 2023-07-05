@@ -15,31 +15,34 @@ const sentence3 = 'Web and Mobile developer'.split('')
 
 const Banner = () => {
   return (
-    <section className='banner w-full relative -z-10'>
+    <section className='banner  max-h-[100vh] '>
       <div>
-        <div className='text-h1 mb-1'>
+        <div className='text-h1 mb-1 tablet:mb-4'>
           {sentence1.map((letter, index) => {
             return (
-              <TextSpan key={index} className='text-mxl text-yellow '>
+              <TextSpan
+                key={index}
+                className='text-mxl tablet:text-[48px] text-yellow '
+              >
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
           })}
         </div>
 
-        <div className='text-h1 mb-1'>
+        <div className='text-h1 mb-1 tablet:mb-4'>
           {sentence2.map((letter, index) => {
             return (
-              <TextSpan key={index} className='text-sxl '>
+              <TextSpan key={index} className='text-sxl tablet:text-[40px]  '>
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
           })}
         </div>
-        <div className='text-h1 mb-8'>
+        <div className='text-h1 mb-8 tablet:mb-10'>
           {sentence3.map((letter, index) => {
             return (
-              <TextSpan key={index} className='text-sxl '>
+              <TextSpan key={index} className='text-sxl  tablet:text-[40px]'>
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
@@ -50,13 +53,13 @@ const Banner = () => {
         <button className='bg-yellow  py-2 px-12 grid place-items-center  rounded-[4px] mb-6'>
           <Link
             href='/projects'
-            className='text-bgcolor text-sm font-semibold cursor-pointer'
+            className='text-bgcolor text-sm tablet:text-[18px] font-semibold cursor-pointer'
           >
             View my projects
           </Link>
         </button>
       </div>
-      <div className='socials z-10'>
+      <div className='socials -z-10 '>
         <a href='https://github.com/IsmaelAvotra' target='_blank'>
           <AiFillGithub />
         </a>
