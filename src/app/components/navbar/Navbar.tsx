@@ -1,5 +1,6 @@
 'use client'
 
+import './Navbar.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -20,24 +21,30 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
-    <div className='navbar p-4 tablet:px-8 tablet:py-6 flex items-center justify-between sticky top-0 z-60 bg-bgcolor '>
+    <div className='navbar p-4 desktop:px-10 tablet:px-8 tablet:py-6 flex items-center justify-between sticky top-0 z-60 '>
       <div className='logo'>
         <Link href='/'>
-          <Image src='/logo.svg' alt='logo' width={24} height={42} />
+          <Image
+            src='/logo.svg'
+            alt='logo'
+            width={24}
+            height={42}
+            className='w-[100%]'
+          />
         </Link>
       </div>
       <div
-        className='menu text-sxl text-textcolor tablet:text-[32px] z-30 '
+        className='menu text-sxl text-textcolor tablet:text-[32px] desktop:hidden z-30 '
         onClick={() => setIsActive(!isActive)}
       >
         {isActive ? <IoClose /> : <IoMenu />}
       </div>
       <div
-        className={`navigation absolute ${
-          isActive ? 'right-0' : 'hidden'
-        } top-0 h-[100vh] w-[60vw] tablet:w-[50vw]  transition-all z-20 `}
+        className={`navigation absolute desktop:relative ${
+          isActive ? 'right-0' : 'hidden desktop:flex desktop:items-center'
+        } top-0 h-[100vh] desktop:h-auto w-[60vw] desktop:w-auto tablet:w-[50vw]  transition-all z-20 `}
       >
-        <ul className='flex flex-col items-start ml-12 tablet:ml-16  gap-10 tablet:gap-16 mt-24 '>
+        <ul className='flex flex-col desktop:flex-row items-start desktop:items-center ml-12 tablet:ml-16  gap-10 tablet:gap-16 desktop:gap-14 mt-24 desktop:mt-0 desktop:ml-0 '>
           <li>
             <Link
               href='/about'

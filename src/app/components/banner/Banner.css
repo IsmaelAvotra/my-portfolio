@@ -5,7 +5,7 @@
   gap: 1rem;
   right: 1rem;
   bottom: 2rem;
-  position: fixed;
+  position: absolute;
   z-index: 3;
 }
 
@@ -28,6 +28,25 @@
   transform: scale(1.2);
 }
 
+@media screen and (min-width: 1248px) {
+  .banner .socials::after {
+    height: 6rem;
+  }
+
+  .banner .text-h1 span {
+    letter-spacing: 2px;
+  }
+
+  .banner .socials {
+    gap: 1.5rem !important;
+    right: 1.5rem !important;
+  }
+
+  .banner .socials svg {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .banner .socials {
     gap: 1.2rem;
@@ -35,5 +54,43 @@
   }
   .banner .socials svg {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  .banner .text-h1 .im,
+  .banner .text-h1 .we {
+    font-size: 7vw;
+    line-height: auto;
+  }
+
+  .banner .text-h1 .hi {
+    font-size: 9vw;
+    line-height: auto;
+  }
+
+  .banner .web {
+    margin-bottom: 1rem;
+  }
+
+  .banner button {
+    padding: 0.2rem 1.5rem;
+  }
+
+  .banner button a {
+    font-size: 4vw;
+  }
+
+  .banner .socials {
+    gap: 1rem;
+    right: 0.5rem;
+  }
+
+  .banner .socials::after {
+    height: 3rem;
+  }
+
+  .banner .socials svg {
+    font-size: 1rem;
   }
 }

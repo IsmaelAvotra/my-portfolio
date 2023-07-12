@@ -1,0 +1,23 @@
+@media screen and (max-width: 358px) {
+  .navbar img {
+    width: 70%;
+  }
+
+  .navbar svg {
+    font-size: 8vw;
+  }
+
+  .navbar ul {
+    margin-left: 1rem;
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+
+  .navbar ul li a {
+    font-size: 1.1rem;
+  }
+
+  .navbar ul a span {
+    font-size: 1.4rem;
+  }
+}

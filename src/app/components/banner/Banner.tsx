@@ -15,14 +15,14 @@ const sentence3 = 'Web and Mobile developer'.split('')
 
 const Banner = () => {
   return (
-    <section className='banner  max-h-[100vh] '>
+    <section className='banner  max-h-[100vh]  '>
       <div>
-        <div className='text-h1 mb-1 tablet:mb-4'>
+        <div className='text-h1 mb-1 tablet:mb-4 desktop:mb-8'>
           {sentence1.map((letter, index) => {
             return (
               <TextSpan
                 key={index}
-                className='text-mxl tablet:text-[48px] text-yellow '
+                className='text-mxl hi tablet:text-[48px] desktop:text-[70px] text-yellow '
               >
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
@@ -30,19 +30,25 @@ const Banner = () => {
           })}
         </div>
 
-        <div className='text-h1 mb-1 tablet:mb-4'>
+        <div className='text-h1  mb-1 tablet:mb-4 desktop:mb-8'>
           {sentence2.map((letter, index) => {
             return (
-              <TextSpan key={index} className='text-sxl tablet:text-[40px]  '>
+              <TextSpan
+                key={index}
+                className='im text-sxl tablet:text-[40px] desktop:text-[60px]  '
+              >
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
           })}
         </div>
-        <div className='text-h1 mb-8 tablet:mb-10'>
+        <div className='web text-h1 mb-8 tablet:mb-10 desktop:mb-12'>
           {sentence3.map((letter, index) => {
             return (
-              <TextSpan key={index} className='text-sxl  tablet:text-[40px]'>
+              <TextSpan
+                key={index}
+                className='we text-sxl  tablet:text-[40px] desktop:text-[60px]'
+              >
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
@@ -53,7 +59,7 @@ const Banner = () => {
         <button className='bg-yellow  py-2 px-12 grid place-items-center  rounded-[4px] mb-6'>
           <Link
             href='/projects'
-            className='text-bgcolor text-sm tablet:text-[18px] font-semibold cursor-pointer'
+            className='text-bgcolor text-sm tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
           >
             View my projects
           </Link>
