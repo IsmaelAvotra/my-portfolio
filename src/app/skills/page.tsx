@@ -33,7 +33,11 @@ const Skills = () => {
                 } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] desktop:text-[18px] rounded flex-1 desktop:flex desktop:items-center desktop:justify-center desktop:gap-4 `}
                 onClick={() => setIndex(1)}
               >
-                <p className={`text-[18px] ${index !== 1 ? 'hidden' : ''}`}>
+                <p
+                  className={`text-[18px] ${
+                    index !== 1 ? 'hidden' : 'hidden desktop:block'
+                  }`}
+                >
                   <AiFillCaretRight />
                 </p>
                 FRONTEND
@@ -46,7 +50,11 @@ const Skills = () => {
                 } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] desktop:text-[18px] rounded flex-1 desktop:flex desktop:items-center desktop:justify-center desktop:gap-4 `}
                 onClick={() => setIndex(2)}
               >
-                <p className={`text-[18px] ${index !== 2 ? 'hidden' : ''}`}>
+                <p
+                  className={`text-[18px] ${
+                    index !== 2 ? 'hidden' : 'hidden desktop:block'
+                  }`}
+                >
                   <AiFillCaretRight />
                 </p>
                 BACKEND
@@ -59,7 +67,11 @@ const Skills = () => {
                 } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] desktop:text-[18px] rounded flex-1 desktop:flex desktop:items-center desktop:justify-center desktop:gap-4  `}
                 onClick={() => setIndex(3)}
               >
-                <p className={`text-[18px] ${index !== 3 ? 'hidden' : ''}`}>
+                <p
+                  className={`text-[18px] ${
+                    index !== 3 ? 'hidden' : 'hidden desktop:block'
+                  }`}
+                >
                   <AiFillCaretRight />
                 </p>
                 MOBILE

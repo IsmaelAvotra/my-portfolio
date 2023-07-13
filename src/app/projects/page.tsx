@@ -8,7 +8,7 @@ import Footer from '../components/footer/Footer'
 const Projects = () => {
   return (
     <>
-      <div className='skills mt-8 px-4 tablet:px-8 mb-16'>
+      <div className=' mt-8 px-4 tablet:px-8 mb-16 '>
         <h2 className='text-lg tablet:text-[22px] mb-8 '>
           {' '}
           <span className='text-yellow text-xl tablet:text-[30px] font-semibold mr-4'>
@@ -16,7 +16,7 @@ const Projects = () => {
           </span>
           My Projects
         </h2>
-        <div className='container flex flex-col gap-8'>
+        <div className='container flex  flex-col  gap-8'>
           {projects.map((project, index) => {
             return (
               <div
@@ -25,22 +25,24 @@ const Projects = () => {
                   index % 2 == 0 ? 'tablet:flex-row' : 'tablet:flex-row-reverse'
                 }`}
               >
-                <div className='top  tablet:flex-1 '>
+                <div className='top tablet:flex-1'>
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
                     width={650}
                     height={460}
-                    className=' mb-2'
+                    className=' mb-2 desktop:w-[100%]'
                   />
                 </div>
-                <div className='bottom tablet:flex-1'>
-                  <p className='flex items-center gap-2 text-titlecolor text-[22px] mb-2'>
+                <div className='bottom  tablet:flex-1'>
+                  <p className='flex items-center gap-2 text-titlecolor text-[22px] desktop:text-[26px]  mb-2'>
                     {' '}
-                    <GiFlowerStar className='text-[20px] text-yellow' />{' '}
+                    <GiFlowerStar className='text-[20px] desktop:text-[24px] text-yellow' />{' '}
                     {project.title}{' '}
                   </p>
-                  <p className='text-[14px] mb-4'>{project.description}</p>
+                  <p className='text-[14px] mb-4 desktop:text-[16px] '>
+                    {project.description}
+                  </p>
                   <div className='buttons flex items-center gap-4'>
                     <Link
                       href='/'

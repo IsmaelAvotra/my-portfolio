@@ -12,6 +12,10 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+.container {
+  margin: 0 auto;
+}
+
 .home {
   min-height: 80vh;
   padding: 0 1rem;
@@ -28,4 +32,7 @@ body {
 
 footer {
   background: linear-gradient(156deg, #020d1e 0%, #021024 100%);
+}
+
+@media screen and (min-width: 1248px) {
 }

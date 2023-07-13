@@ -10,6 +10,6 @@
 @media screen and (min-width: 1248px) {
   .container-soft {
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   }
 }
