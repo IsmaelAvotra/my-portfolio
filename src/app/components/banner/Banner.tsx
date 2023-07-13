@@ -56,10 +56,10 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        <button className='bg-yellow  py-2 px-12 grid place-items-center  rounded-[4px] mb-6'>
+        <button className='border-[0.4px]  py-2 px-12 grid place-items-center  rounded-[4px] mb-6'>
           <Link
             href='/projects'
-            className='text-bgcolor text-sm tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
+            className='text-yellow text-sm tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
           >
             View my projects
           </Link>

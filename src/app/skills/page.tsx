@@ -4,13 +4,14 @@ import './Skills.css'
 import { useState } from 'react'
 import { skillsTab, softSkills } from '../data/skills'
 import Image from 'next/image'
+import { AiFillCaretRight } from 'react-icons/ai'
 import Footer from '../components/footer/Footer'
 
 const Skills = () => {
   const [index, setIndex] = useState(1)
   return (
     <>
-      <div className='skills mt-8 px-4 tablet:px-8'>
+      <div className='skills mt-8 px-4 desktop:px-10 tablet:px-8'>
         <h2 className='text-lg tablet:text-[22px] mb-8 tablet:mb-12'>
           {' '}
           <span className='text-yellow text-xl tablet:text-[30px] font-semibold mr-4'>
@@ -22,55 +23,72 @@ const Skills = () => {
           <h3 className='text-xl text-titlecolor font-medium mb-6 tablet:text-[28px]'>
             Technical Skills
           </h3>
-          <div className='types flex items-center justify-between font-semibold mb-6'>
-            <button
-              className={`${
-                index === 1 ? 'bg-yellow text-bgcolor' : ''
-              } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] rounded flex-1 `}
-              onClick={() => setIndex(1)}
-            >
-              FRONTEND
-            </button>
-            <button
-              className={`${
-                index === 2 ? 'bg-yellow text-bgcolor' : ''
-              } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] rounded flex-1 `}
-              onClick={() => setIndex(2)}
-            >
-              BACKEND
-            </button>
-            <button
-              className={`${
-                index === 3 ? 'bg-yellow text-bgcolor' : ''
-              } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] rounded flex-1 `}
-              onClick={() => setIndex(3)}
-            >
-              MOBILE
-            </button>
-          </div>
-          <div className='container tablet:px-6'>
-            {skillsTab.map((skillTab) => {
-              return (
-                <div key={skillTab.id} className='grid grid-cols-2  gap-4'>
-                  {skillTab.id === index
-                    ? skillTab.skills.map((skill, idx) => {
-                        return (
-                          <div
-                            key={idx}
-                            className='border-[.5px] rounded px-4 py-6 tablet:py-8 flex flex-col gap-6  items-center'
-                          >
-                            <p className='text-[40px]'>{skill.icon}</p>
-                            <p className='text-[20px] font-semibold text-titlecolor'>
-                              {' '}
-                              {skill.name}
-                            </p>
-                          </div>
-                        )
-                      })
-                    : ''}
-                </div>
-              )
-            })}
+          <div className='desktop:flex  desktop:items-start'>
+            <div className='types flex desktop:flex-col desktop:flex-1  justify-between font-semibold mb-6'>
+              <button
+                className={`${
+                  index === 1
+                    ? 'bg-yellow desktop:bg-[transparent] text-bgcolor desktop:text-yellow'
+                    : ''
+                } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] desktop:text-[18px] rounded flex-1 desktop:flex desktop:items-center desktop:justify-center desktop:gap-4 `}
+                onClick={() => setIndex(1)}
+              >
+                <p className={`text-[18px] ${index !== 1 ? 'hidden' : ''}`}>
+                  <AiFillCaretRight />
+                </p>
+                FRONTEND
+              </button>
+              <button
+                className={`${
+                  index === 2
+                    ? 'bg-yellow desktop:bg-[transparent] text-bgcolor desktop:text-yellow'
+                    : ''
+                } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] desktop:text-[18px] rounded flex-1 desktop:flex desktop:items-center desktop:justify-center desktop:gap-4 `}
+                onClick={() => setIndex(2)}
+              >
+                <p className={`text-[18px] ${index !== 2 ? 'hidden' : ''}`}>
+                  <AiFillCaretRight />
+                </p>
+                BACKEND
+              </button>
+              <button
+                className={`${
+                  index === 3
+                    ? 'bg-yellow desktop:bg-[transparent] text-bgcolor desktop:text-yellow'
+                    : ''
+                } px-6 py-2 tablet:py-4 text-[14px] tablet:text-[16px] desktop:text-[18px] rounded flex-1 desktop:flex desktop:items-center desktop:justify-center desktop:gap-4  `}
+                onClick={() => setIndex(3)}
+              >
+                <p className={`text-[18px] ${index !== 3 ? 'hidden' : ''}`}>
+                  <AiFillCaretRight />
+                </p>
+                MOBILE
+              </button>
+            </div>
+            <div className='container tablet:px-6 desktop:flex-[2]'>
+              {skillsTab.map((skillTab) => {
+                return (
+                  <div key={skillTab.id} className='grid grid-cols-2  gap-4'>
+                    {skillTab.id === index
+                      ? skillTab.skills.map((skill, idx) => {
+                          return (
+                            <div
+                              key={idx}
+                              className='border-[.5px] rounded px-4 py-6 tablet:py-8 flex flex-col gap-6  items-center'
+                            >
+                              <p className='text-[40px]'>{skill.icon}</p>
+                              <p className='text-[20px] font-semibold text-titlecolor'>
+                                {' '}
+                                {skill.name}
+                              </p>
+                            </div>
+                          )
+                        })
+                      : ''}
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
         <div className='soft-skills mb-16'>

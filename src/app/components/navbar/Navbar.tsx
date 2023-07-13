@@ -21,7 +21,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
-    <div className='navbar p-4 desktop:px-10 tablet:px-8 tablet:py-6 flex items-center justify-between sticky top-0 z-60 '>
+    <div className='navbar bg-bgcolor p-4 desktop:px-10 tablet:px-8 tablet:py-6 flex items-center justify-between sticky top-0 z-60 '>
       <div className='logo'>
         <Link href='/'>
           <Image
