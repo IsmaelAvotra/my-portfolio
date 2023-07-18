@@ -2,14 +2,14 @@
 import { ReactNode, useState } from 'react'
 
 // import motion framer
-import { motion, useAnimationControls } from 'framer-motion'
+import { motion, useAnimationControls, AnimationControls } from 'framer-motion'
 
 interface TextSpanProps {
   children: ReactNode
   className?: string
 }
 
-const TextSpan = ({ children, className }: TextSpanProps) => {
+const TextSpan = ({ children }: TextSpanProps) => {
   const controls = useAnimationControls()
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -29,8 +29,7 @@ const TextSpan = ({ children, className }: TextSpanProps) => {
 
   return (
     <motion.span
-      animate={controls}
-      className={className}
+      animate={controls as AnimationControls}
       onMouseOver={() => {
         if (!isPlaying) rubberBand()
       }}

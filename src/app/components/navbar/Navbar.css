@@ -1,3 +1,7 @@
+.navbar {
+  user-select: none;
+}
+
 @media screen and (max-width: 358px) {
   .navbar img {
     width: 70%;
@@ -19,5 +23,29 @@
 
   .navbar ul a span {
     font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .navbar .logo img {
+    transform: scale(1);
+    transition: 0.4s ease-in-out;
+  }
+
+  .navbar .logo:hover img {
+    transform: scale(1.05);
+  }
+
+  .navbar ul a span,
+  .navbar ul a {
+    transition: 0.4s ease-in-out;
+  }
+
+  .navbar ul a:hover {
+    color: #ebebd3;
+  }
+
+  .navbar ul a:hover span {
+    color: #da4167;
   }
 }

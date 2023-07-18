@@ -77,7 +77,7 @@ const Skills = () => {
                 MOBILE
               </button>
             </div>
-            <div className='container tablet:px-6 desktop:flex-[2]'>
+            <div className='container  tablet:px-6 desktop:flex-[2]'>
               {skillsTab.map((skillTab) => {
                 return (
                   <div key={skillTab.id} className='grid grid-cols-2  gap-4'>
@@ -104,10 +104,10 @@ const Skills = () => {
           </div>
         </div>
         <div className='soft-skills mb-16'>
-          <h3 className='text-xl tablet:text-[28px] text-titlecolor font-medium mb-6'>
+          <h3 className='text-xl tablet:text-[28px] text-titlecolor font-medium mb-10'>
             Soft Skills
           </h3>
-          <div className='container-soft flex flex-col items-center gap-4 px-4'>
+          <div className='container-soft desktop:max-w-[1250px] flex flex-col items-center gap-4 px-4'>
             {softSkills.map((softSkill, index) => {
               return (
                 <div

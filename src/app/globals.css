@@ -7,7 +7,7 @@
 body {
   background-color: #050f1d;
   color: #bfc8e7;
-  max-width: 1800px;
+  max-width: 1600px;
   margin: 0 auto;
   font-family: 'Manrope', sans-serif;
 }
@@ -34,5 +34,26 @@ footer {
   background: linear-gradient(156deg, #020d1e 0%, #021024 100%);
 }
 
-@media screen and (min-width: 1248px) {
+.form button {
+  border: 0.5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #020d1e;
+  border-color: #bfc8e7;
+  color: #bfc8e7;
+}
+
+.buttons a {
+  transition: 0.4s ease-in-out;
+}
+
+.buttons a:hover {
+  background-color: #ffc857;
+  color: #020d1e;
+}
+
+.buttons a:hover svg {
+  transform: scale(1.05);
 }

@@ -16,39 +16,30 @@ const sentence3 = 'Web and Mobile developer'.split('')
 const Banner = () => {
   return (
     <section className='banner  max-h-[100vh]  '>
-      <div>
-        <div className='text-h1 mb-1 tablet:mb-4 desktop:mb-8'>
+      <div className='text-h1'>
+        <div className='text1-h1 -z-10 desktop:z-0'>
           {sentence1.map((letter, index) => {
             return (
-              <TextSpan
-                key={index}
-                className='text-mxl hi tablet:text-[48px] desktop:text-[70px] text-yellow '
-              >
+              <TextSpan key={index} className=' hi  '>
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
           })}
         </div>
 
-        <div className='text-h1  mb-1 tablet:mb-4 desktop:mb-8'>
+        <div className='text2-h1 -z-10 desktop:z-0'>
           {sentence2.map((letter, index) => {
             return (
-              <TextSpan
-                key={index}
-                className='im text-sxl tablet:text-[40px] desktop:text-[60px]  '
-              >
+              <TextSpan key={index}>
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
           })}
         </div>
-        <div className='web text-h1 mb-8 tablet:mb-10 desktop:mb-12'>
+        <div className='text3-h1 -z-10 desktop:z-0'>
           {sentence3.map((letter, index) => {
             return (
-              <TextSpan
-                key={index}
-                className='we text-sxl  tablet:text-[40px] desktop:text-[60px]'
-              >
+              <TextSpan key={index}>
                 {letter === ' ' ? '\u00A0' : letter}
               </TextSpan>
             )
@@ -56,10 +47,10 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        <button className='border-[0.4px]  py-2 px-12 grid place-items-center  rounded-[4px] mb-6'>
+        <button className='border-[0.4px]  py-2 px-10 grid place-items-center  rounded-[4px] '>
           <Link
             href='/projects'
-            className='text-yellow text-sm tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
+            className='text-yellow text-[15px] tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
           >
             View my projects
           </Link>

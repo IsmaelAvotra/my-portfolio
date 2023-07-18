@@ -5,7 +5,7 @@ import Footer from '../components/footer/Footer'
 const Contact = () => {
   return (
     <>
-      <div className=' mt-8 px-4 tablet:px-8 mb-16 min-h-[80vh]'>
+      <div className='contact mt-8 px-4 tablet:px-8 mb-16 min-h-[80vh]'>
         <div className='title mb-8'>
           <h2 className='text-lg mb-6 tablet:text-[22px]'>
             {' '}
@@ -21,7 +21,7 @@ const Contact = () => {
             to hear from you.{' '}
           </p>
         </div>
-        <div className='desktop:flex desktop:flex-row-reverse desktop:items-center desktop:gap-8 desktop:mt-16 '>
+        <div className='desktop:flex desktop:flex-row-reverse   desktop:gap-8 desktop:mt-16 '>
           <div className='  form flex desktop:flex-[1.8] flex-col gap-4 tablet:gap-5 mb-10 tablet:mb-16'>
             <input
               type='text'
@@ -48,16 +48,24 @@ const Contact = () => {
               Send message
             </button>
           </div>
-          <div className='contact desktop:ml-12 flex desktop:flex-[1] flex-col gap-6'>
+          <div className='contact desktop:ml-4 desktop:mt-8 flex desktop:flex-[1] flex-col gap-6'>
             <div className='linkedin flex items-center gap-3'>
               <AiFillLinkedin className='text-[24px] tablet:text-[32px]' />
-              <Link href='/' className='text-titlecolor tablet:text-[18px]'>
+              <Link
+                href='https://www.linkedin.com/in/ismael-avotra-22546b168'
+                className='text-titlecolor tablet:text-[18px]'
+                target='_blank'
+              >
                 Ismael Avotra
               </Link>
             </div>
             <div className='github flex items-center gap-3'>
               <AiFillGithub className='text-[24px]  tablet:text-[32px]' />
-              <Link href='/' className='text-titlecolor tablet:text-[18px]'>
+              <Link
+                href='https://github.com/IsmaelAvotra'
+                className='text-titlecolor tablet:text-[18px]'
+                target='_blank'
+              >
                 AvotraIsmael
               </Link>
             </div>

@@ -16,12 +16,12 @@ const Projects = () => {
           </span>
           My Projects
         </h2>
-        <div className='container flex  flex-col  gap-8'>
+        <div className=' flex  flex-col  gap-8'>
           {projects.map((project, index) => {
             return (
               <div
                 key={index}
-                className={` tablet:flex items-center ${
+                className={` tablet:flex  items-center ${
                   index % 2 == 0 ? 'tablet:flex-row' : 'tablet:flex-row-reverse'
                 }`}
               >
@@ -34,7 +34,7 @@ const Projects = () => {
                     className=' mb-2 desktop:w-[100%]'
                   />
                 </div>
-                <div className='bottom  tablet:flex-1'>
+                <div className='bottom  tablet:flex-[1]'>
                   <p className='flex items-center gap-2 text-titlecolor text-[22px] desktop:text-[26px]  mb-2'>
                     {' '}
                     <GiFlowerStar className='text-[20px] desktop:text-[24px] text-yellow' />{' '}
@@ -43,10 +43,10 @@ const Projects = () => {
                   <p className='text-[14px] mb-4 desktop:text-[16px] '>
                     {project.description}
                   </p>
-                  <div className='buttons flex items-center gap-4'>
+                  <div className='buttons  flex items-center gap-4'>
                     <Link
                       href='/'
-                      className='bg-bgcolor border-[0.6px] rounded flex items-center gap-4 px-6 py-[6px]'
+                      className='bg-bgcolor  border-[0.6px] rounded flex items-center gap-4 px-6 py-[6px]'
                     >
                       <SiGithub className='text-[18px]' /> Github
                     </Link>
