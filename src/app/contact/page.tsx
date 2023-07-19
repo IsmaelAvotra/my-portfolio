@@ -1,8 +1,24 @@
+'use client'
 import Link from 'next/link'
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
 import Footer from '../components/footer/Footer'
+import { ReactEventHandler, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null)
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (form.current) {
+      emailjs.sendForm(
+        'service_j68lzmz',
+        'template_9j44ik2',
+        form.current,
+        'H6Iwe94ZjHumtgq8R'
+      )
+      form.current.reset()
+    }
+  }
   return (
     <>
       <div className='contact mt-8 px-4 tablet:px-8 mb-16 min-h-[80vh]'>
@@ -18,19 +34,26 @@ const Contact = () => {
             Please don't hesitate to reach out to me if you have any job
             opportunities, questions, or suggestions.{' '}
             <br className='hidden desktop:block' /> I would be more than happy
-            to hear from you.{' '}
+            to hear from you.You can contact me using the contact form on my
+            website. I will respond to you as soon as possible.{' '}
           </p>
         </div>
         <div className='desktop:flex desktop:flex-row-reverse   desktop:gap-8 desktop:mt-16 '>
-          <div className='  form flex desktop:flex-[1.8] flex-col gap-4 tablet:gap-5 mb-10 tablet:mb-16'>
+          <form
+            className=' flex desktop:flex-[1.8] flex-col gap-4 tablet:gap-5 mb-10 tablet:mb-16'
+            onSubmit={sendEmail}
+            ref={form}
+          >
             <input
               type='text'
               placeholder='Your name'
+              name='name'
               className='p-2 rounded bg-bgcolor border-[0.6px] placeholder:text-[14px] focus:outline-none tablet:w-[80%] '
               required
             />
             <input
-              type='text'
+              type='email'
+              name='email'
               placeholder='Your email'
               className='p-2 rounded bg-bgcolor border-[0.6px] placeholder:text-[14px] focus:outline-none tablet:w-[80%] '
               required
@@ -44,10 +67,14 @@ const Contact = () => {
               className='p-2 rounded bg-bgcolor border-[0.6px] placeholder:text-[14px] focus:outline-none resize-none tablet:w-[85%] '
               required
             ></textarea>
-            <button className='bg-titlecolor max-w-[160px] px-4 py-2 rounded text-bgcolor'>
+            <button
+              className='bg-titlecolor max-w-[160px] px-4 py-2 rounded text-bgcolor'
+              type='submit'
+            >
               Send message
             </button>
-          </div>
+          </form>
+
           <div className='contact desktop:ml-4 desktop:mt-8 flex desktop:flex-[1] flex-col gap-6'>
             <div className='linkedin flex items-center gap-3'>
               <AiFillLinkedin className='text-[24px] tablet:text-[32px]' />

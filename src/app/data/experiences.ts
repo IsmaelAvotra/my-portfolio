@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     company: '3C Labcom',
     currentRole: true,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "I built Coach Labib's website using Next.js, featuring a services page and an articles page with detailed content. The site was deployed online to ensure accessibility to users. The deployment process involved leveraging the latest route management capabilities of Next.js 13.",
   },
   {
     id: 2,
@@ -23,27 +23,27 @@ export const experiences: Experience[] = [
     role: 'Full stack web developer',
     date: 'Fev 2023 - Mai 2023',
     company: 'Safe Labs',
-    currentRole: true,
+    currentRole: false,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'During this internship, I developed the Express.js backend for user management, including signin and signup functionalities. I also assisted the team with the frontend development of the Grandioses app using Flutter, and worked on the frontend of others website.',
   },
   {
     id: 3,
 
-    role: 'Full stack web developer',
-    date: 'Jul 2023 - ',
-    company: '3C Labcom',
-    currentRole: true,
+    role: 'Intern in Finance ',
+    date: 'July 2021',
+    company: 'Logifin Conseil',
+    currentRole: false,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "I collaborated in creating a financial forecast plan and contributed to the elaboration of a comprehensive business plan. This involved analyzing various financial ratios to gain insights into the company's financial health and performance.",
   },
   {
     id: 4,
-    role: 'Full stack web developer',
-    date: 'Jul 2023 - ',
-    company: '3C Labcom',
-    currentRole: true,
+    role: 'Initiation internship',
+    date: 'Jun 2020 - Jul 2020',
+    company: 'MC Audit',
+    currentRole: false,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'During this internship, I gained experience in various aspects of financial and accounting tasks. I successfully handled tasks related to calculating VAT and making declarations on the DGI website.I was involved in preparing employee payrolls.',
   },
 ]

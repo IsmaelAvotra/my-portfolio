@@ -25,7 +25,7 @@ const Projects = () => {
                   index % 2 == 0 ? 'tablet:flex-row' : 'tablet:flex-row-reverse'
                 }`}
               >
-                <div className='top tablet:flex-1'>
+                <div className='top  tablet:flex-1'>
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -45,14 +45,16 @@ const Projects = () => {
                   </p>
                   <div className='buttons  flex items-center gap-4'>
                     <Link
-                      href='/'
+                      href={project.githubLink}
                       className='bg-bgcolor  border-[0.6px] rounded flex items-center gap-4 px-6 py-[6px]'
+                      target='_blank'
                     >
                       <SiGithub className='text-[18px]' /> Github
                     </Link>
                     <Link
-                      href='/'
+                      href={project.projectLink}
                       className='bg-bgcolor border-[0.6px] rounded flex items-center gap-4 px-6 py-[6px]'
+                      target='_blank'
                     >
                       <SiVercel /> View site
                     </Link>

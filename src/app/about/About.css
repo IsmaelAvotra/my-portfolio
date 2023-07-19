@@ -2,12 +2,15 @@
   background-color: #050f1d;
   margin-bottom: 1rem;
   box-shadow: 1px 1px 3px 0.5px rgba(191, 200, 231, 0.6);
-  min-width: 340px;
+  min-width: 360px;
   padding: 1rem 0.75rem;
   border-radius: 1rem;
 }
 
 @media screen and (min-width: 1248px) {
+  .experience-card {
+    min-width: 400px;
+  }
   .about button {
     transition: 0.5s ease-in-out;
   }
