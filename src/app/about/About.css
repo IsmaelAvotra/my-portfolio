@@ -7,6 +7,35 @@
   border-radius: 1rem;
 }
 
+.experience-content {
+  position: relative;
+  padding: 2rem 0 0rem 0;
+}
+
+.experience-card:first-child::before {
+  content: 'CURRENT ROLE';
+  position: absolute;
+  color: #ffc857;
+  font-weight: 500;
+  font-size: 14px;
+  top: 0rem;
+  left: 0;
+}
+
+.experience-content::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.experience-content::-webkit-scrollbar-track {
+  background-color: #0a1233;
+  border-radius: 100vw;
+}
+
+.experience-content::-webkit-scrollbar-thumb {
+  background-color: #ffc857;
+  border-radius: 100vw;
+}
+
 @media screen and (min-width: 1248px) {
   .experience-card {
     min-width: 400px;
@@ -22,5 +51,11 @@
 
   .about button:hover a {
     color: #050f1d;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .experience-content::-webkit-scrollbar {
+    display: none;
   }
 }

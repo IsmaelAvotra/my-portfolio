@@ -80,7 +80,10 @@ const Skills = () => {
             <div className='container  tablet:px-6 desktop:flex-[2]'>
               {skillsTab.map((skillTab) => {
                 return (
-                  <div key={skillTab.id} className='grid grid-cols-2  gap-4'>
+                  <div
+                    key={skillTab.id}
+                    className='grid grid-cols-2 desktop:grid-cols-3  gap-4'
+                  >
                     {skillTab.id === index
                       ? skillTab.skills.map((skill, idx) => {
                           return (

@@ -63,6 +63,7 @@ const Contact = () => {
       }
     }
   }
+
   return (
     <>
       <div className='contact mt-8 px-4 tablet:px-8 mb-16 min-h-[80vh]'>

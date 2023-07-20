@@ -7,7 +7,8 @@ export const metadata = {
     default: 'Ismael portfolio',
     template: '%s',
   },
-  description: 'This is the portfolio of Ismael Avotra',
+  description:
+    "Welcome to my portfolio! I'm a passionate Developer specializing in React.js,NExtJs, Node.js,Express js,Nestjs and mobile development with Flutter. Explore my innovative projects and technical skills to create exceptional web and mobile applications.",
 }
 
 export default function RootLayout({
