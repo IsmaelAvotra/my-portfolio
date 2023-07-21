@@ -81,21 +81,34 @@ const Banner = () => {
         </Link>
       </button>
       <div className='socials' data-aos='fade-up' data-aos-delay='800'>
-        <a href='https://github.com/IsmaelAvotra' target='_blank'>
+        <Link
+          href='https://github.com/IsmaelAvotra'
+          target='_blank'
+          aria-label='Github'
+        >
           <AiFillGithub />
-        </a>
-        <a
+        </Link>
+        <Link
           href='https://www.linkedin.com/in/ismael-avotra-22546b168/'
           target='_blank'
+          aria-label='Linkedin'
         >
           <AiFillLinkedin />
-        </a>
-        <a href='https://twitter.com/AvotraIsmael' target='_blank'>
+        </Link>
+        <Link
+          href='https://twitter.com/AvotraIsmael'
+          target='_blank'
+          aria-label='Twitter'
+        >
           <AiOutlineTwitter />
-        </a>
-        <a href='https://www.instagram.com/ismaelavotra/' target='_blank'>
+        </Link>
+        <Link
+          href='https://www.instagram.com/ismaelavotra/'
+          target='_blank'
+          aria-label='Instagram'
+        >
           <AiOutlineInstagram />
-        </a>
+        </Link>
       </div>
     </section>
   )
