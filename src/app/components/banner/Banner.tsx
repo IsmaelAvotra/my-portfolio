@@ -20,8 +20,8 @@ const sentence3 = 'Web and Mobile developer'.split('')
 const Banner = () => {
   useEffect(() => {
     Aos.init({
-      duration: 1000,
-      delay: 400,
+      duration: 600,
+      delay: 200,
     })
   }, [])
   return (
