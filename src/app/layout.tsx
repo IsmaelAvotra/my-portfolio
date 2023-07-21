@@ -10,6 +10,10 @@ export const metadata = {
   openGraph: {
     images: ['https://ismael-avotra.vercel.app/share.png'],
   },
+  twitter: {
+    card: 'summary_large_image',
+    image: 'https://ismael-avotra.vercel.app/share.png',
+  },
   other: {
     google: 'notranslate',
   },
