@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Ismael portfolio',
+  description:
+    "Welcome to my portfolio! I'm a passionate Developer specializing in React.js,NExtJs, Node.js,Express js,Nestjs and mobile development with Flutter. Explore my innovative projects and technical skills to create exceptional web and mobile applications.",
 }
 
 export default function Home() {

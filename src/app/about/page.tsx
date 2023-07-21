@@ -5,7 +5,7 @@ import Footer from '../components/footer/Footer'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-import aboutImage from '@/../public/about.png'
+import aboutImage from '@/../public/about1.jpg'
 
 export const metadata: Metadata = {
   title: 'About Me',
@@ -17,7 +17,7 @@ const AboutPage = () => {
   return (
     <>
       <div className='about mt-8 px-4 tablet:px-8 min-h-[90vh] '>
-        <h2 className='text-lg mb-8 tablet:text-[22px]'>
+        <h2 className='text-[20px] font-medium mb-8 tablet:text-[22px]'>
           {' '}
           <span className='text-yellow text-xl font-semibold mr-4 tablet:text-[30px]'>
             01.
@@ -32,7 +32,7 @@ const AboutPage = () => {
               width={330}
               height={320}
               placeholder='blur'
-              className='rounded-lg  border-[.5px] border-textcolor drop-shadow-image desktop:w-[80%] tablet:w-[100%]'
+              className='rounded-lg w-[340px] h-[330px] object-cover  border-[.5px] border-textcolor drop-shadow-image desktop:w-[80%] desktop:h-[420px] tablet:w-[100%]'
             />
           </div>
           <div className='text desktop:flex-[1.6]'>

@@ -4,12 +4,19 @@ import { projects } from '../data/projcts'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '../components/footer/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'My projects',
+  description:
+    'On this page, you can view my various projects completed using different web and mobile technologies, including demonstrations and source code.',
+}
 
 const Projects = () => {
   return (
     <>
       <div className=' mt-8 px-4 tablet:px-8 mb-16 '>
-        <h2 className='text-lg tablet:text-[22px] mb-8 '>
+        <h2 className='text-[20px] font-medium tablet:text-[22px] mb-8 '>
           {' '}
           <span className='text-yellow text-xl tablet:text-[30px] font-semibold mr-4'>
             03.
