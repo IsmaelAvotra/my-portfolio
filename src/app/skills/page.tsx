@@ -19,11 +19,11 @@ const Skills = () => {
           </span>
           My skills
         </h2>
-        <div className='tech-skills mb-10 tablet:mb-16'>
+        <div className='tech-skill  mb-10 tablet:mb-16'>
           <h3 className='text-xl text-titlecolor font-medium mb-6 tablet:text-[28px]'>
             Technical Skills
           </h3>
-          <div className='desktop:flex  desktop:items-start'>
+          <div className='desktop:flex  desktop:items-start '>
             <div className='types flex desktop:flex-col desktop:flex-1  justify-between font-semibold mb-6'>
               <button
                 className={`${
@@ -77,12 +77,12 @@ const Skills = () => {
                 MOBILE
               </button>
             </div>
-            <div className='container  tablet:px-6 desktop:flex-[2]'>
+            <div className='container  desktop:flex-[2]'>
               {skillsTab.map((skillTab) => {
                 return (
                   <div
                     key={skillTab.id}
-                    className='grid grid-cols-2 desktop:grid-cols-3  gap-4'
+                    className='grid grid-cols-2 tablet:grid-cols-3  gap-4'
                   >
                     {skillTab.id === index
                       ? skillTab.skills.map((skill, idx) => {
@@ -122,7 +122,8 @@ const Skills = () => {
                     alt={softSkill.quality}
                     width={304}
                     height={270}
-                    className='mb-4 rounded-[12px]'
+                    placeholder='blur'
+                    className='mb-4 rounded-[12px] object-cover w-[304px] h-[270px]'
                   />
                   <p className='text-[22px] font-semibold text-center text-titlecolor mb-2'>
                     {softSkill.quality}

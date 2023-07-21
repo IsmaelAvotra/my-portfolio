@@ -16,6 +16,13 @@ import {
 } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { MdRealEstateAgent } from 'react-icons/md'
+import { StaticImageData } from 'next/image'
+
+import teamWork from '@/../public/soft11.jpg'
+import creativity from '@/../public/soft22.jpg'
+import problemSolving from '@/../public/soft33.jpg'
+import autodidact from '@/../public/soft44.webp'
+import organizational from '@/../public/soft55.jpg'
 
 interface Skills {
   icon: ReactNode
@@ -28,7 +35,7 @@ interface SkillsTab {
 }
 
 interface SoftSkils {
-  imageUrl: string
+  imageUrl: StaticImageData
   quality: string
   description: string
 }
@@ -125,31 +132,31 @@ export const skillsTab: SkillsTab[] = [
 
 export const softSkills: SoftSkils[] = [
   {
-    imageUrl: '/soft1.jpg',
+    imageUrl: teamWork,
     quality: 'Team Work',
     description:
       'During my various internships, I have always seen the importance of teamwork. As a developer, teamwork is an essential quality.',
   },
   {
-    imageUrl: '/soft2.jpg',
+    imageUrl: creativity,
     quality: 'Creativity',
     description:
       ' I am constantly using my imagination to find new and innovative solutions to problems and enhance the user experience. ',
   },
   {
-    imageUrl: '/soft3.jpg',
+    imageUrl: problemSolving,
     quality: 'Problem Solving',
     description:
       'I possess a robust problem-solving skill, yet I am not hesitant to seek guidance from experienced individuals whenever necessary.',
   },
   {
-    imageUrl: '/soft4.jpg',
+    imageUrl: autodidact,
     quality: 'Autodidact',
     description:
       "I recognize the significance of both independent work and being a valuable team player, actively contributing to the project's success.",
   },
   {
-    imageUrl: '/soft5.jpg',
+    imageUrl: organizational,
     quality: 'Organizational skills',
     description:
       'This allow me to organize my code in a structured manner improves code maintainability, and scalability of web projects.',

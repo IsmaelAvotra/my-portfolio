@@ -31,6 +31,7 @@ const Projects = () => {
                     alt={project.title}
                     width={650}
                     height={460}
+                    placeholder='blur'
                     className=' mb-2 desktop:w-[100%]'
                   />
                 </div>

@@ -3,6 +3,15 @@ import { experiences } from '../data/experiences'
 import './About.css'
 import Footer from '../components/footer/Footer'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+import aboutImage from '@/../public/about.png'
+
+export const metadata: Metadata = {
+  title: 'About Me',
+  description:
+    'In this page you can see my description,my formation and my experiences',
+}
 
 const AboutPage = () => {
   return (
@@ -18,10 +27,11 @@ const AboutPage = () => {
         <div className='containe flex flex-col desktop:flex-row  gap-8 desktop:gap-10 desktop:items-center  items-center mb-16'>
           <div className='image -z-10 desktop:flex-1  desktop:flex desktop:justify-center'>
             <Image
-              src='/about.png'
+              src={aboutImage}
               alt='profile image'
               width={330}
               height={320}
+              placeholder='blur'
               className='rounded-lg  border-[.5px] border-textcolor drop-shadow-image desktop:w-[80%] tablet:w-[100%]'
             />
           </div>

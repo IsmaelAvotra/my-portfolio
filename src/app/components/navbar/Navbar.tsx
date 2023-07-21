@@ -21,7 +21,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
-    <div className='navbar bg-bgcolor p-4 desktop:px-10 tablet:px-8 tablet:py-6 flex items-center justify-between sticky top-0 z-60 '>
+    <div className='navbar bg-bgcolor p-4 desktop:px-10 tablet:px-8 tablet:py-6 flex items-center justify-between sticky top-0 z-[60] '>
       <div className='logo' onClick={() => setIsActive(false)}>
         <Link href='/'>
           <Image
@@ -34,7 +34,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div
-        className='menu text-sxl text-textcolor tablet:text-[32px] desktop:hidden z-30 '
+        className='menu text-sxl text-textcolor tablet:text-[32px] desktop:hidden z-[80] '
         onClick={() => setIsActive(!isActive)}
       >
         {isActive ? <IoClose /> : <IoMenu />}
@@ -42,7 +42,7 @@ const Navbar = () => {
       <div
         className={`navigation absolute desktop:relative ${
           isActive ? 'right-0' : 'hidden desktop:flex desktop:items-center'
-        } top-0 h-[100vh] desktop:h-auto w-[60vw] desktop:w-auto tablet:w-[50vw]  transition-all z-20  `}
+        } top-0 h-[100vh] desktop:h-auto w-[60vw] desktop:w-auto tablet:w-[50vw]  transition-all z-[70]  `}
       >
         <ul className='flex flex-col desktop:flex-row items-start desktop:items-center ml-12 tablet:ml-16  gap-10 tablet:gap-16 desktop:gap-14 mt-24 desktop:mt-0 desktop:ml-0 '>
           <li>

@@ -30,8 +30,7 @@
   gap: 1rem;
   right: 1rem;
   bottom: 1rem;
-  position: absolute;
-  z-index: 3;
+  position: fixed;
 }
 
 .banner .socials::after {

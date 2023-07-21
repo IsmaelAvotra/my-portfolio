@@ -25,10 +25,10 @@ const Banner = () => {
     })
   }, [])
   return (
-    <section className='banner   max-h-[100vh]  '>
+    <section className='banner z-10 max-h-[100vh]  '>
       <div className='text-h1'>
         <div
-          className='text1-h1 -z-10  desktop:z-0'
+          className='text1-h1   desktop:z-0'
           data-aos='fade-up'
           data-aos-delay='400'
         >
@@ -42,7 +42,7 @@ const Banner = () => {
         </div>
 
         <div
-          className='text2-h1 -z-10 desktop:z-0'
+          className='text2-h1 desktop:z-0'
           data-aos='fade-up'
           data-aos-delay='500'
         >
@@ -55,7 +55,7 @@ const Banner = () => {
           })}
         </div>
         <div
-          className='text3-h1 -z-10  desktop:z-0'
+          className='text3-h1  desktop:z-0'
           data-aos='fade-up'
           data-aos-delay='600'
         >
@@ -68,7 +68,11 @@ const Banner = () => {
           })}
         </div>
       </div>
-      <button className='border-[0.4px]  py-2 px-10 grid place-items-center  rounded-[4px] '>
+      <button
+        className='border-[0.4px]  py-2 px-10 grid place-items-center  rounded-[4px] '
+        data-aos='fade-up'
+        data-aos-delay='700'
+      >
         <Link
           href='/projects'
           className='text-yellow text-[15px] tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
@@ -76,7 +80,7 @@ const Banner = () => {
           View my projects
         </Link>
       </button>
-      <div className='socials ' data-aos='fade-up' data-aos-delay='800'>
+      <div className='socials' data-aos='fade-up' data-aos-delay='800'>
         <a href='https://github.com/IsmaelAvotra' target='_blank'>
           <AiFillGithub />
         </a>
