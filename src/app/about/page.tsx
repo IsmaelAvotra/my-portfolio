@@ -52,7 +52,7 @@ const AboutPage = () => {
             </p>
             <button className='border-[0.4px]  py-2 desktop:py-1 px-8 grid place-items-center  rounded-[4px]  mt-6'>
               <Link
-                href='/cv_ismael.pdf'
+                href='/'
                 className='text-yellow text-[14px]  tablet:text-[18px] font-medium cursor-pointer desktop:text-[16px] desktop:py-[6px] px-[10px]'
                 download
                 target='_blank'
