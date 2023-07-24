@@ -72,6 +72,8 @@ const Form = () => {
         placeholder='Your name'
         name='name'
         className='p-2 rounded bg-bgcolor border-[0.6px] placeholder:text-[14px] focus:outline-none tablet:w-[80%] '
+        minLength={3}
+        maxLength={100}
         required
       />
       <input

@@ -18,11 +18,11 @@ import { TbBrandNextjs } from 'react-icons/tb'
 import { MdRealEstateAgent } from 'react-icons/md'
 import { StaticImageData } from 'next/image'
 
-import teamWork from '@/../public/soft11.jpg'
-import creativity from '@/../public/soft22.jpg'
-import problemSolving from '@/../public/soft33.jpg'
-import autodidact from '@/../public/soft44.webp'
-import organizational from '@/../public/soft55.jpg'
+import teamWork from '../assets/soft11.jpg'
+import creativity from '../assets/soft22.jpg'
+import problemSolving from '../assets/soft33.jpg'
+import autodidact from '../assets/soft44.webp'
+import organizational from '../assets/soft55.jpg'
 
 interface Skills {
   icon: ReactNode

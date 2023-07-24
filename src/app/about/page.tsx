@@ -5,7 +5,7 @@ import Footer from '../components/footer/Footer'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-import aboutImage from '@/../public/about1.jpg'
+import aboutImage from '../assets/about1.jpg'
 
 export const metadata: Metadata = {
   title: 'About Me',

@@ -1,10 +1,10 @@
 import { StaticImageData } from 'next/image'
 
-import project1 from '@/../public/project11.png'
-import project2 from '@/../public/project22.png'
-import project3 from '@/../public/project33.png'
-import project4 from '@/../public/project44.png'
-import project5 from '@/../public/project55.png'
+import project1 from '../assets/project11.png'
+import project2 from '../assets/project22.png'
+import project3 from '../assets/project33.png'
+import project4 from '../assets/project44.png'
+import project5 from '../assets/project55.png'
 
 interface Project {
   imageUrl: StaticImageData
