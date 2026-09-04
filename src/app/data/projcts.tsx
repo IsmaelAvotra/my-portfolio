@@ -3,57 +3,69 @@ import { StaticImageData } from 'next/image'
 import project1 from '../assets/project11.png'
 import project2 from '../assets/project22.png'
 import project3 from '../assets/project33.png'
-import project4 from '../assets/project44.png'
-import project5 from '../assets/project55.png'
+import amp from '../assets/amp.png'
+import alterSysteme from '../assets/alter-systeme.png'
+import homeodiag from '../assets/homeodiag.png'
 
-interface Project {
-  imageUrl: StaticImageData
+export interface Project {
+  imageUrl?: StaticImageData
   title: string
   description: string
-  projectLink: string
-  githubLink: string
+  projectLink?: string
+  githubLink?: string
+  stack: string[]
 }
 
-export const projects: Project[] = [
-  {
-    imageUrl: project1,
-    title: 'Space Tourism',
-    description:
-      'I undertook this website as a challenge from Frontend Mentor, utilizing React to enhance my integration skills. Working on Frontend Mentor challenges has been a rewarding experience, as it has enabled me to sharpen my abilities and stay abreast of the latest web development trends. It serves as an excellent platform for practice, allowing me to refine my skills while staying updated with industry advancements.',
-    projectLink: 'https://space-tourism-ismaelavotra.vercel.app/',
-    githubLink: 'https://github.com/IsmaelAvotra/space-tourism',
-  },
+export const personalProjects: Project[] = [
   {
     imageUrl: project2,
     title: 'New Home',
     description:
-      'This website caters to users seeking to buy or rent properties, offering a comprehensive platform for browsing property listings. It showcases detailed information, including descriptions, photographs, and pricing, enabling users to make informed decisions. With intuitive search functionality, users can effortlessly explore properties based on their specific preferences, ensuring they find their ideal home.',
+      'Property listing platform for buying and renting real estate. Features detailed property cards with photos, pricing, and intuitive search and filter functionality tailored to user preferences.',
     projectLink: 'https://real-estate-app-six-gold.vercel.app/',
     githubLink: 'https://github.com/IsmaelAvotra/real-estate-app',
+    stack: ['React', 'CSS3', 'REST API'],
   },
   {
     imageUrl: project3,
     title: 'Find Anime',
     description:
-      "This website is constructed with React and leverages the Jikan API to offer users access to top anime listings and daily recommendations. Additionally, it includes an 'about' page, and users have the ability to search for any anime and view its comprehensive details. I personally designed the website, ensuring its responsiveness across various devices for an optimal user experience.",
+      'Anime discovery platform powered by the Jikan API. Browse top-ranked titles, get daily recommendations, and search the full catalog with comprehensive series details. Designed and built from scratch.',
     projectLink: 'https://animesearch-app.vercel.app/',
     githubLink: 'https://github.com/IsmaelAvotra/animesearch-app',
+    stack: ['React', 'Jikan API', 'CSS3'],
   },
   {
-    imageUrl: project4,
-    title: 'Gymm Me',
+    imageUrl: project1,
+    title: 'Space Tourism',
     description:
-      'This website is an integration of a design I came across on Dribbble. To bring the design to life, I employed React JS and utilized Swiper JS, a library for implementing the slider functionality. The main objective of creating this landing page was to hone my integration skills by utilizing pure CSS and leveraging the syntax of React.',
-    projectLink: 'https://gymm-me.netlify.app/',
-    githubLink: 'https://github.com/IsmaelAvotra/gym-me',
+      'Multi-page Frontend Mentor challenge built with React. Immersive space-themed UI with smooth page transitions and full responsiveness across all device sizes.',
+    projectLink: 'https://space-tourism-ismaelavotra.vercel.app/',
+    githubLink: 'https://github.com/IsmaelAvotra/space-tourism',
+    stack: ['React', 'CSS3'],
+  },
+]
+
+export const professionalProjects: Project[] = [
+  {
+    imageUrl: amp,
+    title: 'Alliance Maroc Palestine',
+    description:
+      "Institutional website for a Franco-Moroccan solidarity association. Bilingual responsive design with a modular architecture and smooth animations to highlight the association's actions and events.",
+    stack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
   },
   {
-    imageUrl: project5,
-    title: 'Grandioses App Mobile',
+    imageUrl: homeodiag,
+    title: 'Homeodiag',
     description:
-      'This is a mobile project developed with Flutter during my internship. It is the mobile version of a web application called "Grandioses", which allows users to discover and book tickets for themed events. There were three of us working on this project, and I learned a lot about Flutter and mobile development through this experience.',
-    projectLink:
-      'https://play.google.com/store/apps/details?id=com.grandioses.app&hl=fr&gl=US',
-    githubLink: 'https://github.com/IsmaelAvotra',
+      'Medical diagnostic tool for homeopathic practitioners. Browse a remedy catalog, perform cross-symptom searches, and generate patient records. Built collaboratively at Alter Systeme.',
+    stack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+  },
+  {
+    imageUrl: alterSysteme,
+    title: 'Alter Systeme — Landing Page',
+    description:
+      'Company showcase website for Alter Systeme agency, presenting the service offering, portfolio and team. Developed end-to-end — from Figma mockup to production deployment — as a solo project.',
+    stack: ['Next.js', 'TypeScript', 'TailwindCSS', 'NestJS'],
   },
 ]

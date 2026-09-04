@@ -1,91 +1,73 @@
-'use client'
 import Link from 'next/link'
 import TextSpan from './TextSpan'
 import './Banner.css'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiOutlineTwitter,
-  AiOutlineInstagram,
-} from 'react-icons/ai'
-import { useEffect } from 'react'
+const sentence2Before = "I'm ".split('')
+const sentence2Name = 'Ismael'.split('')
+const sentence2After = ','.split('')
+const sentence3 = 'Full stack web Developer'.split('')
 
-const sentence1 = 'Hi,'.split('')
-const sentence2 = "I'm Ismael,".split('')
-const sentence3 = 'Web and Mobile developer'.split('')
+const renderLetters = (letters: string[], prefix: string, style?: React.CSSProperties) =>
+  letters.map((letter, index) =>
+    letter === ' ' ? (
+      <span key={`${prefix}${index}`} className='banner-space'>{' '}</span>
+    ) : (
+      <TextSpan key={`${prefix}${index}`} style={style}>{letter}</TextSpan>
+    )
+  )
+
+const techStack = ['React', 'TypeScript', 'Next.js', 'Node.js', 'Redux', 'Tailwind CSS']
 
 const Banner = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 600,
-      delay: 200,
-    })
-  }, [])
   return (
-    <section className='banner z-10 max-h-[100vh]  '>
-      <div className='text-h1'>
-        <div
-          className='text1-h1   desktop:z-0'
-          data-aos='fade-up'
-          data-aos-delay='400'
-        >
-          {sentence1.map((letter, index) => {
-            return (
-              <TextSpan key={index} className=' hi  '>
-                {letter === ' ' ? '\u00A0' : letter}
-              </TextSpan>
-            )
-          })}
+    <section className='banner z-10 max-h-[100vh]'>
+      {/* Badge disponibilite */}
+      <div className='fade-up-1 flex items-center gap-2 mb-6 border border-textcolor/30 rounded-full px-4 py-[6px] w-fit'>
+        <div className='relative flex-shrink-0 w-2 h-2'>
+          <div className='dot-ping' />
+          <div className='w-2 h-2 rounded-full bg-green-400' style={{ boxShadow: '0 0 6px #ffc857' }} />
         </div>
+        <p className='text-[13px] text-textcolor m-0 leading-none'>
+          Available for new projects
+        </p>
+      </div>
 
-        <div
-          className='text2-h1 desktop:z-0'
-          data-aos='fade-up'
-          data-aos-delay='500'
-        >
-          {sentence2.map((letter, index) => {
-            return (
-              <TextSpan key={index}>
-                {letter === ' ' ? '\u00A0' : letter}
-              </TextSpan>
-            )
-          })}
+      <div className='text-h1'>
+        <div className='text2-h1 desktop:z-0 fade-up-2'>
+          {renderLetters(sentence2Before, 'b')}
+          {renderLetters(sentence2Name, 'n', { color: '#ffc857' })}
+          {renderLetters(sentence2After, 'a')}
         </div>
-        <div
-          className='text3-h1  desktop:z-0'
-          data-aos='fade-up'
-          data-aos-delay='600'
-        >
-          {sentence3.map((letter, index) => {
-            return (
-              <TextSpan key={index}>
-                {letter === ' ' ? '\u00A0' : letter}
-              </TextSpan>
-            )
-          })}
+        <div className='text3-h1 desktop:z-0 fade-up-3'>
+          {renderLetters(sentence3, 's')}
         </div>
       </div>
-      <button
-        className='border-[0.4px]  py-2 px-10 grid place-items-center  rounded-[4px] '
-        data-aos='fade-up'
-        data-aos-delay='700'
-      >
-        <Link
-          href='/projects'
-          className='text-yellow text-[15px] tablet:text-[18px] font-semibold cursor-pointer desktop:text-[20px] desktop:py-[6px] px-[10px]'
-        >
-          View my projects
-        </Link>
-      </button>
-      <div className='socials' data-aos='fade-up' data-aos-delay='800'>
-        <Link
-          href='https://github.com/IsmaelAvotra'
-          target='_blank'
-          aria-label='Github'
-        >
+
+      {/* Description */}
+      <p className='fade-up-3 text-textcolor text-[14px] tablet:text-[16px] max-w-[520px] mt-2 mb-6 leading-relaxed'>
+        Full Stack JavaScript Developer with 3 years of experience, specializing in frontend
+        development. Proficient in React, Next.js, and TypeScript, with solid hands-on experience
+        in Node.js for backend development. Passionate about building high-performance, accessible,
+        and well-architected interfaces.
+      </p>
+
+      {/* Tech stack pills */}
+      <div className='fade-up-4 flex flex-wrap items-center gap-2 mb-6'>
+        <p className='text-[12px] text-textcolor/60 m-0'>Tech Stack:</p>
+        {techStack.map((tech) => (
+          <div
+            key={tech}
+            className='text-[12px] border border-textcolor/30 rounded px-3 py-1 text-textcolor'
+          >
+            {tech}
+          </div>
+        ))}
+      </div>
+
+      {/* Reseaux sociaux */}
+      <div className='socials fade-up-5'>
+        <Link href='https://github.com/IsmaelAvotra' target='_blank' aria-label='Github'>
           <AiFillGithub />
         </Link>
         <Link
@@ -94,20 +76,6 @@ const Banner = () => {
           aria-label='Linkedin'
         >
           <AiFillLinkedin />
-        </Link>
-        <Link
-          href='https://twitter.com/AvotraIsmael'
-          target='_blank'
-          aria-label='Twitter'
-        >
-          <AiOutlineTwitter />
-        </Link>
-        <Link
-          href='https://www.instagram.com/ismaelavotra/'
-          target='_blank'
-          aria-label='Instagram'
-        >
-          <AiOutlineInstagram />
         </Link>
       </div>
     </section>

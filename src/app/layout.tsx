@@ -1,5 +1,20 @@
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
+import { Lora, Manrope } from 'next/font/google'
+
+const lora = Lora({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-lora',
+  display: 'swap',
+})
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
 
 export const metadata = {
   title: {
@@ -25,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={`${lora.variable} ${manrope.variable}`}>
       <body>
         <Navbar />
         {children}

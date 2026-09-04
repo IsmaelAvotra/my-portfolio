@@ -45,6 +45,10 @@
     color: #ebebd3;
   }
 
+   .navbar ul a.btn:hover {
+    color: #050F1D;
+  }
+
   .navbar ul a:hover span {
     color: #da4167;
   }

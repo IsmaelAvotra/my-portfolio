@@ -4,41 +4,37 @@ interface Experience {
   date: string
   company: string
   description: string
+  tags: string[]
+  isCurrent?: boolean
 }
 
 export const experiences: Experience[] = [
   {
     id: 1,
-    role: 'Full stack web developer',
-    date: 'Jun 2023 - ',
-    company: '3C Labcom',
+    role: 'Full Stack Developer',
+    date: 'Jul 2023 – Present',
+    company: 'Alter Systeme',
+    isCurrent: true,
     description:
-      "I built Coach Labib's website using Next.js, featuring a services page and an articles page with detailed content. The site was deployed online to ensure accessibility to users. The deployment process involved leveraging the latest route management capabilities of Next.js 13.",
+      'Developing web platforms end to end in a remote CDI position — building interfaces from Figma designs, implementing REST APIs with Node.js, and shipping features to production. Working primarily with React, Next.js, TypeScript, and NestJS.',
+    tags: ['React', 'Next.js', 'TypeScript', 'Node.js', 'REST APIs'],
   },
   {
     id: 2,
-
-    role: 'Full stack web developer',
-    date: 'Fev 2023 - Mai 2023',
-    company: 'Safe Labs',
+    role: 'Frontend Developer',
+    date: 'Feb 2022 – Jun 2023',
+    company: 'Safe Labs Agency',
     description:
-      'During this internship, I developed the Express.js backend for user management, including signin and signup functionalities. I also assisted the team with the frontend development of the Grandioses app using Flutter, and worked on the frontend of others website.',
+      'Contributed to web and mobile projects at a Marrakech-based agency. Built responsive interfaces with React and participated in Flutter mobile development, collaborating closely with design and backend teams.',
+    tags: ['React', 'Flutter', 'UI/UX','Figma'],
   },
   {
     id: 3,
-
-    role: 'Intern in Finance ',
-    date: 'July 2021',
+    role: 'Intern in Finance',
+    date: 'Jun 2021 – Aug 2021',
     company: 'Logifin Conseil',
     description:
-      "I collaborated in creating a financial forecast plan and contributed to the elaboration of a comprehensive business plan. This involved analyzing various financial ratios to gain insights into the company's financial health and performance.",
-  },
-  {
-    id: 4,
-    role: 'Initiation internship',
-    date: 'Jun 2020 - Jul 2020',
-    company: 'MC Audit',
-    description:
-      'During this internship, I gained experience in various aspects of financial and accounting tasks. I successfully handled tasks related to calculating VAT and making declarations on the DGI website.I was involved in preparing employee payrolls.',
+      "Collaborated in creating a financial forecast plan and contributed to the elaboration of a comprehensive business plan. Analyzed various financial ratios to gain insights into the company's financial health and performance.",
+    tags: ['Financial Analysis', 'Forecasting'],
   },
 ]

@@ -1,3 +1,39 @@
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rubber-band {
+  0%   { transform: scale3d(1,1,1); }
+  20%  { transform: scale3d(1.4,.55,1); }
+  40%  { transform: scale3d(.75,1.25,1); }
+  60%  { transform: scale3d(1.25,.85,1); }
+  80%  { transform: scale3d(.9,1.05,1); }
+  100% { transform: scale3d(1,1,1); }
+}
+
+.fade-up-1 { animation: fade-up 0.6s ease 0.3s both; }
+.fade-up-2 { animation: fade-up 0.6s ease 0.5s both; }
+.fade-up-3 { animation: fade-up 0.6s ease 0.65s both; }
+.fade-up-4 { animation: fade-up 0.6s ease 0.7s both; }
+.fade-up-5 { animation: fade-up 0.6s ease 0.8s both; }
+
+.dot-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #050f1d;
+  opacity: 0.7;
+  animation: dot-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes dot-ping {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
 .banner .text-h1 {
   display: flex;
   flex-direction: column;
@@ -8,12 +44,21 @@
 
 .banner .text-h1 .text1-h1 span {
   color: #ffc857;
-  font-size: 9vw;
+  font-size: 10vw;
+}
+
+.banner .text-h1 span:hover {
+  animation: rubber-band 0.6s ease;
+}
+
+.banner .banner-space {
+  display: inline;
+  letter-spacing: 0;
 }
 
 .banner span {
-  font-family: 'Lora', serif;
-  font-size: 7vw;
+  font-family: var(--font-lora), serif;
+  font-size: 6vw;
   display: inline-block;
   font-weight: 700;
   transition: 0.1s ease-in-out;

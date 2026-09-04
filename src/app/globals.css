@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #050f1d;
   color: #bfc8e7;
   max-width: 1600px;
   margin: 0 auto;
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-manrope), sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -30,16 +32,12 @@ body {
 }
 
 .text-h1 {
-  font-family: 'Lora', serif;
+  font-family: var(--font-lora), serif;
   font-weight: 600;
 }
 
 .navbar .navigation {
   backdrop-filter: blur(50px);
-}
-
-footer {
-  background: linear-gradient(156deg, #020d1e 0%, #021024 100%);
 }
 
 .form button {
