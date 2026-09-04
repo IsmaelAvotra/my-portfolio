@@ -71,7 +71,7 @@ const Contact = () => {
                   </div>
                   <div className='flex-1 min-w-0'>
                     <p className='text-titlecolor text-[13px] font-medium'>{label}</p>
-                    <p className='text-textcolor/40 text-[11px] truncate'>{handle}</p>
+                    <p className='text-textcolor/75 text-[11px] truncate'>{handle}</p>
                   </div>
                   <HiArrowTopRightOnSquare className='text-textcolor/20 group-hover:text-textcolor/50 transition-colors text-[14px] flex-shrink-0' />
                 </Link>
@@ -85,7 +85,7 @@ const Contact = () => {
                 className='w-2 h-2 rounded-full bg-green-400'
                 style={{ boxShadow: '0 0 6px #4ade80' }}
               />
-              <span className='text-[12px] text-textcolor/50'>Available for new projects</span>
+              <span className='text-[12px] text-textcolor/70'>Available for new projects</span>
             </div>
           </div>
 

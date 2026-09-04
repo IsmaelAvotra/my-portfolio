@@ -45,7 +45,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
       <p className='text-textcolor/60 text-[13px] leading-relaxed flex-1'>{project.description}</p>
       <div className='flex flex-wrap gap-2 pt-3 border-t border-textcolor/10'>
         {project.stack.map((tech) => (
-          <span key={tech} className='text-[11px] text-textcolor/50 border border-textcolor/15 px-2 py-[2px] rounded-full'>
+          <span key={tech} className='text-[11px] text-textcolor/70 border border-textcolor/25 px-2 py-[2px] rounded-full'>
             {tech}
           </span>
         ))}
