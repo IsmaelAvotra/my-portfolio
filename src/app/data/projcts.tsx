@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-import project1 from '../assets/project11.png'
+import portfolio from '../assets/portfolio.png'
 import project2 from '../assets/project22.png'
 import project3 from '../assets/project33.png'
 import amp from '../assets/amp.png'
@@ -40,15 +40,15 @@ export const personalProjects: Project[] = [
     stack: ['React', 'Jikan API', 'CSS3'],
   },
   {
-    imageUrl: project1,
-    title: 'Space Tourism',
+    imageUrl: portfolio,
+    title: 'My Portfolio',
     description: {
-      en: 'Multi-page Frontend Mentor challenge built with React. Immersive space-themed UI with smooth page transitions and full responsiveness across all device sizes.',
-      fr: "Défi Frontend Mentor multi-pages développé avec React. Interface immersive sur le thème spatial avec transitions fluides et responsivité complète sur toutes les tailles d'écran.",
+      en: 'Personal developer portfolio built with Next.js App Router and Tailwind CSS. Features a bilingual EN/FR language switcher, smooth animations, and dedicated sections for skills, projects and contact.',
+      fr: 'Portfolio développeur personnel construit avec Next.js App Router et Tailwind CSS. Propose un switch de langue EN/FR, des animations fluides et des sections dédiées aux compétences, projets et contact.',
     },
-    projectLink: 'https://space-tourism-ismaelavotra.vercel.app/',
-    githubLink: 'https://github.com/IsmaelAvotra/space-tourism',
-    stack: ['React', 'CSS3'],
+    projectLink: 'https://ismael-avotra.vercel.app/',
+    githubLink: 'https://github.com/IsmaelAvotra/my-portfolio',
+    stack: ['Next.js', 'Tailwind CSS'],
   },
 ]
 
