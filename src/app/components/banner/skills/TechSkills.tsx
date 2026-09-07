@@ -7,21 +7,22 @@ import { BsLightningChargeFill } from 'react-icons/bs'
 import SkillCategoryTab from './SkillCategoryTab'
 import SkillCard from './SkillCard'
 import { FaTools } from 'react-icons/fa'
+import type { Dict } from '../../../locales'
 
-const categories = [
-  { id: 1, label: 'Frontend', icon: <MdOutlineImportantDevices /> },
-  { id: 2, label: 'Backend', icon: <IoServer /> },
-  { id: 3, label: 'Tools', icon: <FaTools /> },
-]
-
-const TechSkills = () => {
+const TechSkills = ({ dict }: { dict: Dict['skills'] }) => {
   const [activeId, setActiveId] = useState(1)
+
+  const categories = [
+    { id: 1, label: 'Frontend', icon: <MdOutlineImportantDevices /> },
+    { id: 2, label: 'Backend', icon: <IoServer /> },
+    { id: 3, label: dict.tools, icon: <FaTools /> },
+  ]
 
   return (
     <div className='desktop:flex desktop:items-start desktop:gap-8'>
-      <div className='flex desktop:flex-col gap-2 mb-6 desktop:mb-0 bg-[#061426] border border-textcolor/10 rounded-xl px-3 py-4 desktop:flex-[1]'>
+      <div className='flex desktop:flex-col gap-2 mb-6 desktop:mb-0 bg-[#061426] border border-textcolor/10 rounded-xl px-3 py-2 tablet:py-4 desktop:flex-[1]'>
         <p className='hidden desktop:block uppercase text-[11px] font-semibold text-textcolor/50 tracking-widest px-2 mb-2'>
-          Categories
+          {dict.categories}
         </p>
         {categories.map((cat) => (
           <SkillCategoryTab
@@ -36,10 +37,10 @@ const TechSkills = () => {
         <div className='hidden desktop:block mt-4 bg-textcolor/5 rounded-xl px-4 py-3'>
           <p className='flex items-center gap-2 text-yellow font-semibold text-[14px] mb-1'>
             <BsLightningChargeFill />
-            Engineering Excellence
+            {dict.engineeringExcellence}
           </p>
           <p className='text-textcolor/70 text-[12px] leading-relaxed'>
-            Constantly learning and adapting to modern engineering standards.
+            {dict.engineeringDesc}
           </p>
         </div>
       </div>
@@ -53,6 +54,7 @@ const TechSkills = () => {
                   icon={skill.icon}
                   name={skill.name}
                   level={skill.level}
+                  levelLabel={dict.levels[skill.level]}
                   color={skill.color}
                 />
               ))}

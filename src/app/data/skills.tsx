@@ -34,10 +34,15 @@ interface SkillsTab {
   skills: Skills[]
 }
 
-interface SoftSkils {
-  icon: ReactNode
+interface SoftSkillTexts {
   quality: string
   description: string
+}
+
+interface SoftSkils {
+  icon: ReactNode
+  en: SoftSkillTexts
+  fr: SoftSkillTexts
   tag: string
 }
 
@@ -84,37 +89,72 @@ export const skillsTab: SkillsTab[] = [
 export const softSkills: SoftSkils[] = [
   {
     icon: <HiUserGroup />,
-    quality: 'Team Collaboration',
     tag: 'Leadership',
-    description:
-      'At Alter Systeme, I regularly take part in cross-functional design workshops with product and design teams before development starts. At Safe Labs Agency, I worked closely with designers and backend developers to deliver consistent web and mobile experiences — teamwork has shaped how I approach every project.',
+    en: {
+      quality: 'Team Collaboration',
+      description:
+        'At Alter Systeme, I regularly take part in cross-functional design workshops with product and design teams before development starts. At Safe Labs Agency, I worked closely with designers and backend developers to deliver consistent web and mobile experiences — teamwork has shaped how I approach every project.',
+    },
+    fr: {
+      quality: 'Travail en équipe',
+      description:
+        "Chez Alter Systeme, je participe régulièrement à des ateliers design transverses avec les équipes produit et design avant le développement. Chez Safe Labs Agency, j'ai collaboré étroitement avec designers et développeurs backend pour livrer des expériences web et mobile cohérentes.",
+    },
   },
   {
     icon: <HiLightBulb />,
-    quality: 'Creativity',
     tag: 'Creative',
-    description:
-      "I've designed UI/UX mockups in Figma for real client projects, including a multilingual social platform and a medical diagnosis tool, before turning them into working interfaces. I enjoy finding the right balance between a clean visual design and a technically solid implementation.",
+    en: {
+      quality: 'Creativity',
+      description:
+        "I've designed UI/UX mockups in Figma for real client projects, including a multilingual social platform and a medical diagnosis tool, before turning them into working interfaces. I enjoy finding the right balance between a clean visual design and a technically solid implementation.",
+    },
+    fr: {
+      quality: 'Créativité',
+      description:
+        "J'ai conçu des maquettes UI/UX dans Figma pour de vrais projets clients, dont une plateforme sociale multilingue et un outil de diagnostic médical, avant de les transformer en interfaces fonctionnelles. J'aime trouver le juste équilibre entre un design visuel soigné et une implémentation techniquement solide.",
+    },
   },
   {
     icon: <HiPuzzle />,
-    quality: 'Problem Solving',
     tag: 'Analytical',
-    description:
-      "From integrating REST APIs to structuring frontend architecture on production applications, I'm used to breaking down complex features into manageable pieces. I'm confident tackling unfamiliar problems on my own, but I also know when to ask for guidance to move faster.",
+    en: {
+      quality: 'Problem Solving',
+      description:
+        "From integrating REST APIs to structuring frontend architecture on production applications, I'm used to breaking down complex features into manageable pieces. I'm confident tackling unfamiliar problems on my own, but I also know when to ask for guidance to move faster.",
+    },
+    fr: {
+      quality: 'Résolution de problèmes',
+      description:
+        "De l'intégration d'API REST à la structuration de l'architecture frontend en production, je suis habitué à décomposer des fonctionnalités complexes en éléments gérables. Je suis à l'aise pour résoudre seul des problèmes inédits, tout en sachant quand solliciter de l'aide pour avancer plus vite.",
+    },
   },
   {
     icon: <HiAcademicCap />,
-    quality: 'Autodidact',
     tag: 'Agility',
-    description:
-      'I started as a finance student before teaching myself web development from scratch. That same self-taught mindset now drives how I pick up new tools and technologies on the job — most recently expanding into NestJS, Docker and CI/CD workflows through hands-on project work.',
+    en: {
+      quality: 'Autodidact',
+      description:
+        'I started as a finance student before teaching myself web development from scratch. That same self-taught mindset now drives how I pick up new tools and technologies on the job — most recently expanding into NestJS, Docker and CI/CD workflows through hands-on project work.',
+    },
+    fr: {
+      quality: 'Autodidacte',
+      description:
+        "J'ai commencé comme étudiant en finance avant de m'autoformer au développement web. Cette même mentalité autodidacte guide désormais l'acquisition de nouveaux outils et technologies — plus récemment NestJS, Docker et les workflows CI/CD à travers des projets concrets.",
+    },
   },
   {
     icon: <HiClipboardList />,
-    quality: 'Organizational Skills',
     tag: 'Strategy',
-    description:
-      "I've built and shipped an entire company website on my own, from architecture to deployment, which taught me to keep code structured and maintainable without relying on someone else to catch what I miss. I apply the same discipline to every project I work on, big or small.",
+    en: {
+      quality: 'Organizational Skills',
+      description:
+        "I've built and shipped an entire company website on my own, from architecture to deployment, which taught me to keep code structured and maintainable without relying on someone else to catch what I miss. I apply the same discipline to every project I work on, big or small.",
+    },
+    fr: {
+      quality: 'Organisation',
+      description:
+        "J'ai conçu et livré un site d'entreprise entier seul, de l'architecture au déploiement, ce qui m'a appris à garder un code structuré et maintenable. J'applique la même rigueur à chaque projet, grand ou petit.",
+    },
   },
 ]

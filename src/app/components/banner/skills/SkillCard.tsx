@@ -6,6 +6,7 @@ interface SkillCardProps {
   icon: ReactNode
   name: string
   level: Level
+  levelLabel: string
   color: string
 }
 
@@ -16,7 +17,7 @@ const levelStyle: Record<Level, string> = {
   Familiar: 'bg-textcolor/5 text-textcolor/40',
 }
 
-const SkillCard = ({ icon, name, level, color }: SkillCardProps) => {
+const SkillCard = ({ icon, name, level, levelLabel, color }: SkillCardProps) => {
   return (
     <div className='bg-[#061426] border border-textcolor/10 rounded-xl p-4 flex flex-col gap-4 hover:border-textcolor/30 transition-colors duration-200'>
       <div className='flex items-start justify-between'>
@@ -27,7 +28,7 @@ const SkillCard = ({ icon, name, level, color }: SkillCardProps) => {
           {icon}
         </div>
         <span className={`text-[11px] font-semibold px-3 py-[3px] rounded-full ${levelStyle[level]}`}>
-          {level}
+          {levelLabel}
         </span>
       </div>
       <p className='text-titlecolor font-bold text-[16px]'>{name}</p>

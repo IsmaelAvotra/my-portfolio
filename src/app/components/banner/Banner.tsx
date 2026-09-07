@@ -2,11 +2,10 @@ import Link from 'next/link'
 import TextSpan from './TextSpan'
 import './Banner.css'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import type { Dict } from '../../locales'
 
-const sentence2Before = "I'm ".split('')
 const sentence2Name = 'Ismael'.split('')
 const sentence2After = ','.split('')
-const sentence3 = 'Full stack web Developer'.split('')
 
 const renderLetters = (letters: string[], prefix: string, style?: React.CSSProperties) =>
   letters.map((letter, index) =>
@@ -19,17 +18,19 @@ const renderLetters = (letters: string[], prefix: string, style?: React.CSSPrope
 
 const techStack = ['React', 'TypeScript', 'Next.js', 'Node.js', 'Redux', 'Tailwind CSS']
 
-const Banner = () => {
+const Banner = ({ dict }: { dict: Dict['banner'] }) => {
+  const sentence2Before = dict.greeting.split('')
+  const sentence3 = dict.role.split('')
+
   return (
     <section className='banner z-10 max-h-[100vh]'>
-      {/* Badge disponibilite */}
       <div className='fade-up-1 flex items-center gap-2 mb-6 border border-textcolor/30 rounded-full px-4 py-[6px] w-fit'>
         <div className='relative flex-shrink-0 w-2 h-2'>
           <div className='dot-ping' />
           <div className='w-2 h-2 rounded-full bg-green-400' style={{ boxShadow: '0 0 6px #ffc857' }} />
         </div>
         <p className='text-[13px] text-textcolor m-0 leading-none'>
-          Available for new projects
+          {dict.available}
         </p>
       </div>
 
@@ -44,17 +45,12 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* Description */}
       <p className='fade-up-3 text-textcolor text-[14px] tablet:text-[16px] max-w-[520px] mt-2 mb-6 leading-relaxed'>
-        Full Stack JavaScript Developer with 3 years of experience, specializing in frontend
-        development. Proficient in React, Next.js, and TypeScript, with solid hands-on experience
-        in Node.js for backend development. Passionate about building high-performance, accessible,
-        and well-architected interfaces.
+        {dict.description}
       </p>
 
-      {/* Tech stack pills */}
       <div className='fade-up-4 flex flex-wrap items-center gap-2 mb-6'>
-        <p className='text-[12px] text-textcolor/60 m-0'>Tech Stack:</p>
+        <p className='text-[12px] text-textcolor/60 m-0'>{dict.techStack}</p>
         {techStack.map((tech) => (
           <div
             key={tech}
@@ -65,7 +61,6 @@ const Banner = () => {
         ))}
       </div>
 
-      {/* Reseaux sociaux */}
       <div className='socials fade-up-5'>
         <Link href='https://github.com/IsmaelAvotra' target='_blank' aria-label='Github'>
           <AiFillGithub />

@@ -1,6 +1,9 @@
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Lora, Manrope } from 'next/font/google'
+import { cookies } from 'next/headers'
+import type { Lang } from './locales'
+import { translations } from './locales'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -34,15 +37,18 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const lang = (cookies().get('lang')?.value ?? 'en') as Lang
+  const dict = translations[lang]
+
   return (
-    <html lang='en' className={`${lora.variable} ${manrope.variable}`}>
+    <html lang={lang} className={`${lora.variable} ${manrope.variable}`}>
       <body>
-        <Navbar />
+        <Navbar lang={lang} dict={dict.navbar} />
         {children}
       </body>
     </html>

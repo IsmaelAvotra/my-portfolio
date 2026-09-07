@@ -41,15 +41,17 @@
     transition: 0.4s ease-in-out;
   }
 
-  .navbar ul a:hover {
+  .navbar ul a:hover,
+  .navbar ul a.nav-active {
     color: #ebebd3;
   }
 
-   .navbar ul a.btn:hover {
+  .navbar ul a.btn:hover {
     color: #050F1D;
   }
 
-  .navbar ul a:hover span {
+  .navbar ul a:hover span,
+  .navbar ul a.nav-active span {
     color: #da4167;
   }
 }

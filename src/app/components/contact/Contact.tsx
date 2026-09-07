@@ -1,15 +1,8 @@
 import Link from 'next/link'
 import { AiFillLinkedin, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
-import Footer from '../footer/Footer'
 import Form from './Form'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Contact Me',
-  description:
-    'On this page, you can see my contacts, and you can also use the form to get in touch with me.',
-}
+import type { Dict } from '../../locales'
 
 const socialLinks = [
   {
@@ -32,14 +25,13 @@ const socialLinks = [
   },
 ]
 
-const Contact = () => {
+const Contact = ({ dict }: { dict: Dict['contact'] }) => {
   return (
-    <>
-      <div id='contact' className='contact mt-8 px-4 tablet:px-8 mb-16 scroll-mt-28'>
+    <div id='contact' className='contact mt-8 px-4 tablet:px-8 mb-16 scroll-mt-28'>
         <div className='flex items-center gap-4 mb-10'>
           <h2 className='text-[20px] font-medium whitespace-nowrap tablet:text-[22px]'>
             <span className='text-yellow text-xl font-semibold mr-4 tablet:text-[24px]'>04.</span>
-            Contact Me
+            {dict.sectionTitle}
           </h2>
           <div className='h-[1px] flex-1 bg-textcolor/20' />
         </div>
@@ -48,11 +40,10 @@ const Contact = () => {
           <div className='bg-[#061426] border border-textcolor/10 rounded-xl p-6 flex flex-col gap-6 desktop:flex-[2] mb-6 desktop:mb-0'>
             <div>
               <p className='text-titlecolor font-semibold text-[17px] mb-2'>
-                Let's work together
+                {dict.letsWork}
               </p>
               <p className='text-textcolor/60 text-[13px] leading-relaxed'>
-                Open to new opportunities, freelance projects, and interesting collaborations.
-                Feel free to reach out — I'll get back to you as soon as possible.
+                {dict.openTo}
               </p>
             </div>
 
@@ -81,21 +72,19 @@ const Contact = () => {
             <div className='h-[1px] bg-textcolor/10' />
 
             <div className='flex items-center gap-2'>
-              <div
-                className='w-2 h-2 rounded-full bg-green-400'
-                style={{ boxShadow: '0 0 6px #4ade80' }}
-              />
-              <span className='text-[12px] text-textcolor/70'>Available for new projects</span>
+              <div className='relative flex-shrink-0 w-2 h-2'>
+                <div className='dot-ping' />
+                <div className='w-2 h-2 rounded-full bg-green-400' style={{ boxShadow: '0 0 6px #ffc857' }} />
+              </div>
+              <p className='text-[13px] text-textcolor m-0 leading-none'>{dict.available}</p>
             </div>
           </div>
 
           <div className='bg-[#061426] border border-textcolor/10 rounded-xl p-6 desktop:flex-[3]'>
-            <Form />
+            <Form dict={dict.form} />
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+    </div>
   )
 }
 

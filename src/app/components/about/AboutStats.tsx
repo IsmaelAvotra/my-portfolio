@@ -1,10 +1,12 @@
-const stats = [
-  { value: '3+', label: 'Years Exp.' },
-  { value: '10+', label: 'Projects Built' },
-  { value: '2', label: 'Companies' },
-]
+import type { Dict } from '../../locales'
 
-const AboutStats = () => {
+const AboutStats = ({ dict }: { dict: Dict['about']['stats'] }) => {
+  const stats = [
+    { value: '3+', label: dict.yearsExp },
+    { value: '10+', label: dict.projectsBuilt },
+    { value: '2', label: dict.companies },
+  ]
+
   return (
     <div className='mt-6'>
       <div className='h-[1px] desktop:w-3/4 bg-textcolor/20 mt-6 mb-8' />

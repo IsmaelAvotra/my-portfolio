@@ -3,8 +3,9 @@ import React from 'react'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { HiCheckCircle, HiXCircle } from 'react-icons/hi2'
+import type { Dict } from '../../locales'
 
-const Form = () => {
+const Form = ({ dict }: { dict: Dict['contact']['form'] }) => {
   const form = useRef<HTMLFormElement>(null)
   const [isError, setIsError] = useState<boolean>(false)
   const [isSuccess, setIsSuccess] = useState<boolean>(false)
@@ -39,7 +40,7 @@ const Form = () => {
     <form className='flex flex-col gap-4' onSubmit={sendEmail} ref={form}>
       <input
         type='text'
-        placeholder='Your name'
+        placeholder={dict.namePlaceholder}
         name='name'
         className='w-full p-3 rounded-xl bg-[#0b1829] border border-textcolor/8 text-textcolor placeholder:text-textcolor/30 placeholder:text-[13px] focus:outline-none focus:border-textcolor/30 transition-colors'
         minLength={3}
@@ -49,7 +50,7 @@ const Form = () => {
       <input
         type='email'
         name='email'
-        placeholder='Your email'
+        placeholder={dict.emailPlaceholder}
         className='w-full p-3 rounded-xl bg-[#0b1829] border border-textcolor/8 text-textcolor placeholder:text-textcolor/30 placeholder:text-[13px] focus:outline-none focus:border-textcolor/30 transition-colors'
         required
       />
@@ -58,7 +59,7 @@ const Form = () => {
         id='message'
         cols={30}
         rows={7}
-        placeholder='Your message...'
+        placeholder={dict.messagePlaceholder}
         className='w-full p-3 rounded-xl bg-[#0b1829] border border-textcolor/8 text-textcolor placeholder:text-textcolor/30 placeholder:text-[13px] focus:outline-none focus:border-textcolor/30 transition-colors resize-none'
         required
       />
@@ -66,14 +67,14 @@ const Form = () => {
       {isSuccess && (
         <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-[13px]'>
           <HiCheckCircle className='text-[18px] flex-shrink-0' />
-          Message sent! I'll get back to you as soon as possible.
+          {dict.successMsg}
         </div>
       )}
 
       {isError && (
         <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-red/10 border border-red/20 text-red text-[13px]'>
           <HiXCircle className='text-[18px] flex-shrink-0' />
-          Failed to send. Please try again or reach out directly.
+          {dict.errorMsg}
         </div>
       )}
 
@@ -82,7 +83,7 @@ const Form = () => {
         type='submit'
         disabled={isSending}
       >
-        {isSending ? 'Sending...' : 'Send message'}
+        {isSending ? dict.sending : dict.send}
       </button>
     </form>
   )

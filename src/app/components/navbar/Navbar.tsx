@@ -5,19 +5,30 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { IoMenu, IoClose } from 'react-icons/io5'
+import LanguageSwitcher from '../LanguageSwitcher'
+import type { Lang, Dict } from '../../locales'
 
-const Navbar = () => {
+const sectionIds = ['about', 'skills', 'projects', 'contact']
+
+const Navbar = ({ lang, dict }: { lang: Lang; dict: Dict['navbar'] }) => {
   const [isActive, setIsActive] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>('')
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      if (scrollPosition > 24) {
-        setIsActive(false)
-      }
+      if (window.scrollY > 24) setIsActive(false)
+
+      const scrollPos = window.scrollY + 120
+      let current = ''
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id)
+        if (el && el.offsetTop <= scrollPos) current = id
+      })
+      setActiveSection(current)
     }
 
     window.addEventListener('scroll', handleScroll)
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
@@ -47,59 +58,53 @@ const Navbar = () => {
           <li>
             <a
               href='#about'
-              className='text-lg tablet:text-[18px]'
+              className={`text-lg tablet:text-[18px]${activeSection === 'about' ? ' nav-active' : ''}`}
               onClick={() => setIsActive(false)}
             >
               <span className='text-yellow text-[18px] tablet:text-[20px] font-semibold mr-4'>
                 01.
               </span>
-              About
+              {dict.about}
             </a>
           </li>
           <li>
             <a
               href='#skills'
-              className='text-lg tablet:text-[18px]'
+              className={`text-lg tablet:text-[18px]${activeSection === 'skills' ? ' nav-active' : ''}`}
               onClick={() => setIsActive(false)}
             >
-              <span className='text-yellow text-[18px]  tablet:text-[20px] font-semibold mr-4'>
+              <span className='text-yellow text-[18px] tablet:text-[20px] font-semibold mr-4'>
                 02.
               </span>
-              Skills
+              {dict.skills}
             </a>
           </li>
           <li>
             <a
               href='#projects'
-              className='text-lg tablet:text-[18px]'
+              className={`text-lg tablet:text-[18px]${activeSection === 'projects' ? ' nav-active' : ''}`}
               onClick={() => setIsActive(false)}
             >
-              <span className='text-yellow text-[18px]  tablet:text-[20px] font-semibold mr-4'>
+              <span className='text-yellow text-[18px] tablet:text-[20px] font-semibold mr-4'>
                 03.
               </span>
-              Projects
+              {dict.projects}
             </a>
           </li>
           <li>
             <a
               href='#contact'
-              className='text-lg tablet:text-[18px]'
+              className={`text-lg tablet:text-[18px]${activeSection === 'contact' ? ' nav-active' : ''}`}
               onClick={() => setIsActive(false)}
             >
-              <span className='text-yellow text-[18px]  tablet:text-[20px] font-semibold mr-4'>
+              <span className='text-yellow text-[18px] tablet:text-[20px] font-semibold mr-4'>
                 04.
               </span>
-              Contact
+              {dict.contact}
             </a>
           </li>
           <li>
-            <a
-              href='#'
-              className='bg-bgcolor btn text-yellow text-[14px] font-normal border tablet:text-[16px] py-[6px] px-6 rounded-md hover:bg-yellow hover:text-bgcolor hover:border-none transition-all'
-              onClick={() => setIsActive(false)}
-            >
-              Resume
-            </a>
+            <LanguageSwitcher lang={lang} />
           </li>
         </ul>
       </div>

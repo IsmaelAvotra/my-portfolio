@@ -5,8 +5,9 @@ import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
 import { personalProjects, professionalProjects, Project } from '../../data/projcts'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Lang, Dict } from '../../locales'
 
-const ProjectCard = ({ project }: { project: Project }) => (
+const ProjectCard = ({ project, lang }: { project: Project; lang: Lang }) => (
   <div className='bg-[#061426] border border-textcolor/10 rounded-xl overflow-hidden flex flex-col hover:border-textcolor/30 transition-colors duration-200 group'>
     {project.imageUrl ? (
       <div className='overflow-hidden p-3 pb-0'>
@@ -42,7 +43,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
           )}
         </div>
       </div>
-      <p className='text-textcolor/60 text-[13px] leading-relaxed flex-1'>{project.description}</p>
+      <p className='text-textcolor/60 text-[13px] leading-relaxed flex-1'>{project.description[lang]}</p>
       <div className='flex flex-wrap gap-2 pt-3 border-t border-textcolor/10'>
         {project.stack.map((tech) => (
           <span key={tech} className='text-[11px] text-textcolor/70 border border-textcolor/25 px-2 py-[2px] rounded-full'>
@@ -54,35 +55,35 @@ const ProjectCard = ({ project }: { project: Project }) => (
   </div>
 )
 
-type Tab = 'Personal' | 'Professional'
+type Tab = 'personal' | 'professional'
 
-const tabs: { label: Tab; projects: Project[] }[] = [
-  { label: 'Professional', projects: professionalProjects },
-  { label: 'Personal', projects: personalProjects },
-]
+const Projects = ({ lang, dict }: { lang: Lang; dict: Dict['projects'] }) => {
+  const [active, setActive] = useState<Tab>('professional')
 
-const Projects = () => {
-  const [active, setActive] = useState<Tab>('Professional')
+  const tabs: { key: Tab; label: string; projects: Project[] }[] = [
+    { key: 'professional', label: dict.professional, projects: professionalProjects },
+    { key: 'personal', label: dict.personal, projects: personalProjects },
+  ]
 
-  const current = tabs.find((t) => t.label === active)!
+  const current = tabs.find((t) => t.key === active)!
 
   return (
     <div id='projects' className='mt-8 px-4 tablet:px-8 mb-16 scroll-mt-28'>
       <div className='flex items-center gap-4 mb-10'>
         <h2 className='text-[20px] font-medium whitespace-nowrap tablet:text-[22px]'>
           <span className='text-yellow text-xl font-semibold mr-4 tablet:text-[24px]'>03.</span>
-          My Projects
+          {dict.sectionTitle}
         </h2>
         <div className='h-[1px] flex-1 bg-textcolor/20' />
       </div>
 
       <div className='flex items-center gap-1 mb-8 bg-[#061426] border border-textcolor/10 rounded-xl p-1 w-fit'>
-        {tabs.map(({ label, projects }) => (
+        {tabs.map(({ key, label, projects }) => (
           <button
-            key={label}
-            onClick={() => setActive(label)}
+            key={key}
+            onClick={() => setActive(key)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[14px] font-medium transition-all duration-200 ${
-              active === label
+              active === key
                 ? 'bg-textcolor/15 text-titlecolor'
                 : 'text-textcolor/60 hover:text-textcolor/80'
             }`}
@@ -90,7 +91,7 @@ const Projects = () => {
             {label}
             <span
               className={`text-[11px] min-w-[20px] h-[20px] flex items-center justify-center rounded-full px-1 ${
-                active === label
+                active === key
                   ? 'bg-textcolor/20 text-titlecolor'
                   : 'bg-textcolor/10 text-textcolor/30'
               }`}
@@ -103,7 +104,7 @@ const Projects = () => {
 
       <div className='grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6'>
         {current.projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} lang={lang} />
         ))}
       </div>
     </div>
